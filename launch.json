@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sales-page",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3000", "--directory", "D:/Change Yourself/TRANG SALE PAGE"],
+      "port": 3000
+    }
+  ]
+}
