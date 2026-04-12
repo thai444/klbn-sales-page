@@ -37,8 +37,9 @@
     .cta-btn:hover { background: #93401A; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(176,90,42,0.35); }
     .pillar-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--amber); border-radius: 8px; padding: 1.5rem; transition: box-shadow 0.25s ease; }
     .pillar-card:hover { box-shadow: 0 4px 20px rgba(44,26,14,0.1); }
-    .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; position: relative; box-shadow: 0 2px 12px rgba(44,26,14,0.05); }
-    .testimonial-card::before { content:'\201C'; font-family:'Lora',serif; font-size:4.5rem; color:var(--amber); opacity:0.2; position:absolute; top:-0.25rem; left:1rem; line-height:1; }
+    .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; position: relative; box-shadow: 0 2px 16px rgba(44,26,14,0.07); }
+    .chat-bubble { background:#f0f2f5; border-radius:0 14px 14px 14px; padding:0.9rem 1.1rem; position:relative; margin-left:52px; margin-bottom:0.65rem; }
+    .chat-bubble::before { content:''; width:10px; height:10px; background:#f0f2f5; position:absolute; top:0; left:-8px; clip-path:polygon(100% 0,100% 100%,0 0); }
     .value-row { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; padding:1rem 1.25rem; border-bottom:1px solid var(--cream-3); }
     .value-row:last-child { border-bottom:none; }
     .faq-item { border-bottom:1px solid var(--border); padding:1.1rem 0; }
@@ -566,34 +567,49 @@
     </h2>
     <div style="display:flex;flex-direction:column;gap:2rem;">
 
+      <!-- Minh -->
       <div class="testimonial-card reveal">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
-          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0;font-family:'Lora',serif;font-size:1.2rem;">M</div>
+          <img src="avatar-minh.jpg" alt="Minh" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--amber);" />
           <div><p style="font-weight:700;color:var(--brown);">Minh · 31 tuổi, Nhân viên ngân hàng</p><p style="font-size:0.8rem;color:var(--text-3);">Xuất phát điểm: Mất 800 triệu vì đầu tư Crypto sai thời điểm. Sống trong trạng thái tê liệt hoàn toàn 4 tháng.</p></div>
         </div>
         <p style="color:var(--text-3);font-size:0.92rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Nỗi sợ khi đăng ký: "Tôi đã thử quá nhiều thứ rồi. Tôi sợ lại thất bại một lần nữa và mất nốt niềm tin vào bản thân."</p>
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Ngủ đúng giờ trở lại. Khôi phục được thói quen tập Gym sau 18 tháng bỏ. Quan trọng hơn, lần đầu tiên sau 4 tháng, Minh cảm thấy mình đang kiểm soát cuộc sống của mình, không phải bị cuộc sống kéo đi.</p>
-        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;">"Tôi không nghĩ kỷ luật lại cho tôi cảm giác tự do. Nhưng đúng là như vậy."</p>
+        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Tôi không nghĩ kỷ luật lại cho tôi cảm giác tự do. Nhưng đúng là như vậy."</p>
+        <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
+          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Minh</p>
+          <img src="feedback-minh.jpg" alt="Feedback từ Minh" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
+        </div>
       </div>
 
+      <!-- Hùng -->
       <div class="testimonial-card reveal">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
-          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0;font-family:'Lora',serif;font-size:1.2rem;">H</div>
+          <img src="avatar-hung.jpg" alt="Hùng" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--amber);" />
           <div><p style="font-weight:700;color:var(--brown);">Hùng · 27 tuổi, Vừa nghỉ việc</p><p style="font-size:0.8rem;color:var(--text-3);">Xuất phát điểm: Nghỉ việc sau 3 năm làm trái ngành. Ở nhà 6 tháng trong vòng lặp: Ngủ muộn · dậy trưa · lướt điện thoại · tự trách · ngủ muộn.</p></div>
         </div>
         <p style="color:var(--text-3);font-size:0.92rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Nỗi sợ khi đăng ký: "Tôi chưa có thu nhập. Tôi không biết mình có đủ kỷ luật không vì cả cuộc đời tôi chưa từng giỏi cái này."</p>
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Thiết lập lại nhịp sinh học hoàn toàn. Tìm ra hướng đi mới và bắt đầu xây dựng kỹ năng trong lĩnh vực mình thực sự muốn. Tháng thứ 4 sau chương trình: nhận được Offer lương cao hơn <strong style="color:var(--rust);">40%</strong> so với công việc cũ.</p>
-        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;">"Thứ thay đổi không phải kỹ năng của tôi. Thứ thay đổi là tôi tin rằng mình có thể, và đó là thứ duy nhất quan trọng lúc bắt đầu."</p>
+        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Thứ thay đổi không phải kỹ năng của tôi. Thứ thay đổi là tôi tin rằng mình có thể, và đó là thứ duy nhất quan trọng lúc bắt đầu."</p>
+        <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
+          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Hùng</p>
+          <img src="feedback-hung.jpg" alt="Feedback từ Hùng" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
+        </div>
       </div>
 
+      <!-- Thắng -->
       <div class="testimonial-card reveal">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
-          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex-shrink:0;font-family:'Lora',serif;font-size:1.2rem;">T</div>
+          <img src="avatar-thang.jpg" alt="Thắng" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--amber);" />
           <div><p style="font-weight:700;color:var(--brown);">Thắng · 38 tuổi, Có gia đình và công việc ổn định</p><p style="font-size:0.8rem;color:var(--text-3);">Xuất phát điểm: Nhìn từ bên ngoài ổn định. Nhưng đang sống theo quán tính, hôn nhân bắt đầu có khoảng cách.</p></div>
         </div>
         <p style="color:var(--text-3);font-size:0.92rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Nỗi sợ khi đăng ký: "Tôi bận và mệt. Tôi không chắc mình có thêm năng lượng cho một chương trình nữa không."</p>
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Lấy lại được 2 giờ mỗi ngày nhờ hệ thống ngày rõ ràng hơn. Mối quan hệ với vợ cải thiện đáng kể, vì khi Thắng ổn hơn bên trong, anh có nhiều hơn để cho đi bên ngoài.</p>
-        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;">"Tôi không cần thêm thời gian. Tôi cần biết cách dùng thời gian mình đang có. Đó là thứ mình học được."</p>
+        <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Tôi không cần thêm thời gian. Tôi cần biết cách dùng thời gian mình đang có. Đó là thứ mình học được."</p>
+        <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
+          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Thắng</p>
+          <img src="feedback-thang.jpg" alt="Feedback từ Thắng" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
+        </div>
       </div>
     </div>
 
@@ -622,10 +638,19 @@
       <div class="value-row" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);"><div><p style="font-weight:600;color:var(--amber);font-size:0.92rem;">BONUS · Bộ template "Nhật Ký Kỷ Luật 90 Ngày" (PDF có thể in)</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">290.000đ</p></div>
       <div style="padding:1rem 1.25rem;display:flex;justify-content:space-between;background:var(--cream-3);"><p style="font-weight:700;color:var(--brown);">TỔNG GIÁ TRỊ</p><p style="font-weight:700;color:var(--text-3);text-decoration:line-through;">7.780.000đ</p></div>
       <div style="padding:2rem;text-align:center;background:linear-gradient(135deg,#FFF8EE,#FFF3DC);">
-        <p style="font-size:0.85rem;color:var(--text-3);margin-bottom:0.4rem;">Bạn Chỉ Đầu Tư:</p>
+        <!-- 50 người banner -->
+        <div style="background:linear-gradient(135deg,#B05A2A,#8B3E18);border-radius:10px;padding:0.85rem 1.25rem;margin-bottom:1.25rem;display:inline-block;max-width:100%;">
+          <p style="color:#fff;font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.2rem;">🎯 Giá Hỗ Trợ Đặc Biệt · Chỉ 50 Người Đầu Tiên</p>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.72rem;line-height:1.5;">Mình cần <strong style="color:#FFD580;">case study thực tế</strong> để chứng minh hệ thống. Bù lại, bạn được vào với mức giá <strong style="color:#FFD580;">thấp hơn 87%</strong> so với giá thực tế sau này.</p>
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-3);margin-bottom:0.3rem;text-decoration:line-through;">Giá thực tế: 7.780.000đ</p>
+        <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:0.4rem;">Giá hỗ trợ lấy case study:</p>
         <p class="serif" style="font-size:3.2rem;font-weight:700;color:var(--rust);line-height:1;margin-bottom:0.4rem;">990.000đ</p>
         <p style="font-size:0.82rem;color:var(--text-3);">Không bằng chi phí ăn sáng trong 3 tháng · nhưng kết quả kéo dài cả đời</p>
-        <p style="font-size:0.82rem;color:var(--text-2);margin-top:0.75rem;font-style:italic;">Vì đây là đợt ra mắt lần đầu tiên. Sau đợt này, giá sẽ điều chỉnh về mức tương xứng với giá trị thực.</p>
+        <div style="margin-top:1rem;padding:0.75rem 1rem;background:rgba(176,90,42,0.08);border-radius:8px;border-left:3px solid var(--rust);">
+          <p style="font-size:0.8rem;color:var(--rust);font-weight:700;margin-bottom:0.2rem;">⚠️ Sau khi đủ 50 người, giá sẽ tăng về mức thực tế.</p>
+          <p style="font-size:0.76rem;color:var(--text-2);">Đây không phải chiến thuật. Đây là lý do tại sao mức giá này tồn tại — và tại sao nó sẽ không còn sau khi mình có đủ case study.</p>
+        </div>
       </div>
     </div>
 
