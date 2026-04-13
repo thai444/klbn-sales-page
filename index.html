@@ -501,7 +501,7 @@
         </div>
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">🎙️</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">Buổi hướng dẫn trực tiếp hàng tháng (Zoom)</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Mình làm việc trực tiếp với từng người · Hỏi đáp · Điều chỉnh lộ trình cá nhân.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">3 buổi Live Q&A hàng tháng (Zoom)</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Hỏi trực tiếp · Nhận phản hồi cá nhân · Điều chỉnh lộ trình cùng nhau.</p></div>
         </div>
       </div>
     </div>
@@ -769,9 +769,10 @@
     <!-- ===== BƯỚC 3: QR + BANK INFO (ẨN MẶC ĐỊNH) ===== -->
     <div id="qr-section" style="display:none;margin-top:0;opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease;">
       <!-- Success banner -->
-      <div style="background:#2D7A45;color:#fff;border-radius:12px 12px 0 0;padding:1rem 1.5rem;text-align:center;margin-top:1rem;">
+      <div style="background:#2D7A45;color:#fff;border-radius:12px 12px 0 0;padding:1rem 1.5rem;text-align:center;margin-top:1rem;position:relative;">
         <p style="font-weight:800;font-size:1rem;">✅ Thông tin đã được ghi nhận!</p>
         <p style="font-size:0.8rem;opacity:0.85;margin-top:0.2rem;">Hoàn tất thanh toán bên dưới để kích hoạt chương trình</p>
+        <button onclick="goBackToBumps()" style="position:absolute;top:50%;right:1rem;transform:translateY(-50%);background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.4);border-radius:6px;padding:0.3rem 0.7rem;font-size:0.72rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;">← Sửa đơn</button>
       </div>
 
       <div style="background:#fff;border:1px solid var(--border);border-radius:0 0 16px 16px;padding:2.5rem;text-align:center;box-shadow:0 8px 32px rgba(44,26,14,0.1);">
@@ -1023,6 +1024,21 @@
     setTimeout(function() {
       document.getElementById('bump-section').scrollIntoView({ behavior:'smooth', block:'start' });
     }, 300);
+  }
+
+  /* ── Back to bumps from QR ── */
+  function goBackToBumps() {
+    /* Ẩn QR section */
+    var qrSection = document.getElementById('qr-section');
+    qrSection.style.opacity   = '0';
+    qrSection.style.transform = 'translateY(16px)';
+    setTimeout(function() { qrSection.style.display = 'none'; }, 400);
+
+    /* Mở lại bump section */
+    var bumpSection = document.getElementById('bump-section');
+    bumpSection.style.maxHeight = 'none';
+    bumpSection.style.opacity   = '1';
+    bumpSection.scrollIntoView({ behavior:'smooth', block:'start' });
   }
 
   /* ── Confirm bumps → reveal QR ── */
