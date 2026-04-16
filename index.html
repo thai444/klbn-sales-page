@@ -57,7 +57,7 @@
     .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease,transform 0.65s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
     .texture-bg { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47B2A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    @media(max-width:640px){.two-col{grid-template-columns:1fr !important;}.sticky-bar{flex-direction:column;text-align:center;}.cta-btn{font-size:0.9rem;padding:0.85rem 1.5rem;}}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr !important;}.sticky-bar{flex-direction:row;padding:0.55rem 1rem;gap:0.75rem;}.sticky-bar p{font-size:0.7rem !important;}.cta-btn{font-size:0.9rem;padding:0.85rem 1.5rem;}.sticky-cta{font-size:0.8rem !important;padding:0.6rem 1rem !important;white-space:nowrap;}.price-block-inner{padding:1rem 0.85rem !important;}.price-big{font-size:2.2rem !important;}.price-banner{padding:0.65rem 0.9rem !important;margin-bottom:0.75rem !important;}.price-warning{padding:0.55rem 0.75rem !important;margin-top:0.75rem !important;}}
   </style>
 </head>
 <body>
@@ -650,17 +650,17 @@
       <div class="value-row" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);"><div><p style="font-weight:600;color:var(--amber);font-size:0.92rem;">BONUS · Khóa học ngắn "Thiết Kế Buổi Sáng 45 Phút" (tặng kèm)</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">590.000đ</p></div>
       <div class="value-row" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);"><div><p style="font-weight:600;color:var(--amber);font-size:0.92rem;">BONUS · Bộ template "Nhật Ký Kỷ Luật 90 Ngày" (PDF có thể in)</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">290.000đ</p></div>
       <div style="padding:1rem 1.25rem;display:flex;justify-content:space-between;background:var(--cream-3);"><p style="font-weight:700;color:var(--brown);">TỔNG GIÁ TRỊ</p><p style="font-weight:700;color:var(--text-3);text-decoration:line-through;">8.680.000đ</p></div>
-      <div style="padding:2rem;text-align:center;background:linear-gradient(135deg,#FFF8EE,#FFF3DC);">
+      <div class="price-block-inner" style="padding:2rem;text-align:center;background:linear-gradient(135deg,#FFF8EE,#FFF3DC);">
         <!-- 50 người banner -->
-        <div style="background:linear-gradient(135deg,#B05A2A,#8B3E18);border-radius:10px;padding:0.85rem 1.25rem;margin-bottom:1.25rem;display:inline-block;max-width:100%;">
+        <div class="price-banner" style="background:linear-gradient(135deg,#B05A2A,#8B3E18);border-radius:10px;padding:0.85rem 1.25rem;margin-bottom:1.25rem;display:inline-block;max-width:100%;">
           <p style="color:#fff;font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.2rem;">🎯 Giá Hỗ Trợ Đặc Biệt · Chỉ 50 Người Đầu Tiên</p>
           <p style="color:rgba(255,255,255,0.85);font-size:0.72rem;line-height:1.5;">Mình cần <strong style="color:#FFD580;">case study thực tế</strong> để chứng minh hệ thống. Bù lại, bạn được vào với mức giá <strong style="color:#FFD580;">thấp hơn 89%</strong> so với giá thực tế sau này.</p>
         </div>
         <p style="font-size:0.82rem;color:var(--text-3);margin-bottom:0.3rem;text-decoration:line-through;">Giá thực tế: 8.680.000đ</p>
         <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:0.4rem;">Giá hỗ trợ lấy case study:</p>
-        <p class="serif" style="font-size:3.2rem;font-weight:700;color:var(--rust);line-height:1;margin-bottom:0.4rem;">990.000đ</p>
+        <p class="serif price-big" style="font-size:3.2rem;font-weight:700;color:var(--rust);line-height:1;margin-bottom:0.4rem;">990.000đ</p>
         <p style="font-size:0.82rem;color:var(--text-3);">Không bằng chi phí ăn sáng trong 3 tháng · nhưng kết quả kéo dài cả đời</p>
-        <div style="margin-top:1rem;padding:0.75rem 1rem;background:rgba(176,90,42,0.08);border-radius:8px;border-left:3px solid var(--rust);">
+        <div class="price-warning" style="margin-top:1rem;padding:0.75rem 1rem;background:rgba(176,90,42,0.08);border-radius:8px;border-left:3px solid var(--rust);">
           <p style="font-size:0.8rem;color:var(--rust);font-weight:700;margin-bottom:0.2rem;">⚠️ Sau khi đủ 50 người, giá sẽ tăng về mức thực tế.</p>
           <p style="font-size:0.76rem;color:var(--text-2);">Đây không phải chiến thuật. Đây là lý do tại sao mức giá này tồn tại · và tại sao nó sẽ không còn sau khi mình có đủ case study.</p>
         </div>
@@ -954,7 +954,7 @@
   <div>
     <p style="font-size:0.78rem;color:var(--text-3);margin-bottom:0.1rem;">Chỉ còn <strong style="color:var(--rust);">14 suất</strong> · Sau khi đủ 50 người, chương trình đóng cửa</p>
   </div>
-  <a href="#register-form-wrap" class="cta-btn" style="font-size:0.88rem;padding:0.75rem 1.5rem;white-space:nowrap;">▶ Đăng Ký Ngay</a>
+  <a href="#register-form-wrap" class="cta-btn sticky-cta" style="font-size:0.88rem;padding:0.75rem 1.5rem;white-space:nowrap;">▶ Đăng Ký Ngay</a>
 </div>
 <div style="height:80px;"></div>
 
