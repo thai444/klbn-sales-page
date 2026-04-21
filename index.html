@@ -4,6 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kỷ Luật Bản Năng · Chương Trình 90 Ngày</title>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4132104507101712');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4132104507101712&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -1059,7 +1076,10 @@
     document.getElementById('qr-img').src =
       'https://img.vietqr.io/image/STB-071220615555-compact2.jpg?amount=490000&addInfo=' + encoded + '&accountName=LE%20CAO%20THAI';
 
-    /* 4. Lưu data vào Google Sheets (non-blocking) */
+    /* 4. Meta Pixel — InitiateCheckout */
+    fbq('track', 'InitiateCheckout', { value: 490000, currency: 'VND' });
+
+    /* 5. Lưu data vào Google Sheets (non-blocking) */
     fetch('https://script.google.com/macros/s/AKfycbzuK4-xL0Z1dOGSg9hYCMOHuUATHd-MMnE22Rx2Bp_ddaSKdioyRKUOhYM1Xe78IgDH6Q/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1138,7 +1158,10 @@
     var totalFmt = total.toLocaleString('vi-VN') + 'đ';
     document.getElementById('total-amount').textContent = totalFmt;
 
-    /* 4. Hiển thị tóm tắt đơn hàng */
+    /* 4. Meta Pixel — Lead (xác nhận chọn gói) */
+    fbq('track', 'Lead', { value: total, currency: 'VND' });
+
+    /* 5. Hiển thị tóm tắt đơn hàng */
     var summaryLines = ['✅ Kỷ Luật Bản Năng 90 Ngày · 490.000đ'];
     if (b1) summaryLines.push('✅ Tài Chính Cá Nhân Cho Người Khủng Hoảng · 390.000đ');
     if (b2) summaryLines.push('✅ Workbook Dinh Dưỡng Phục Hồi · 199.000đ');
