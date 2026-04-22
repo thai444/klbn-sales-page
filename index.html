@@ -1102,10 +1102,8 @@
     formWrap.style.overflow   = 'hidden';
     formWrap.style.maxHeight  = formWrap.scrollHeight + 'px';
     setTimeout(function() {
-      formWrap.style.maxHeight = '72px';
-      formWrap.style.opacity   = '0.5';
-      formWrap.querySelector('[style*="background:var(--rust)"]').innerHTML =
-        '<p style="color:#fff;font-weight:700;font-size:0.88rem;">✅ Thông tin đã lưu · ' + name + ' · ' + phone + '</p>';
+      formWrap.style.maxHeight = '0px';
+      formWrap.style.opacity   = '0';
     }, 100);
 
     /* 7. Smooth scroll to bumps */
