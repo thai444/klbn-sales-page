@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cảm ơn bạn · Kỷ Luật Bản Năng</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4132104507101712');
+  fbq('track', 'PageView');
+  /* KHÔNG fire Purchase ở browser - chỉ CAPI server-side fire khi Sepay confirm tiền thật */
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4132104507101712&ev=PageView&noscript=1"
+  /></noscript>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRH8TT4CW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QRH8TT4CW0');
+    /* KHÔNG fire purchase ở browser - chỉ server-side fire khi Sepay confirm tiền thật */
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wvhzyrvwqw");
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream:   #FAF6F0;
+      --cream-2: #F3EDE3;
+      --cream-3: #EAE0D2;
+      --brown:   #2C1A0E;
+      --brown-2: #4A2F1A;
+      --brown-3: #6B4226;
+      --amber:   #C47B2A;
+      --amber-l: #E09B46;
+      --rust:    #B05A2A;
+      --text:    #3D2410;
+      --text-2:  #6B4A30;
+      --text-3:  #9B7A5A;
+      --border:  #DDD0BB;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 17px; }
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .serif { font-family: 'Lora', Georgia, serif; }
+    @media(max-width:640px){ html{ font-size: 16px; } }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 1.75rem;
+      box-shadow: 0 8px 32px rgba(44,26,14,0.08);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--brown);
+      color: var(--amber-l);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .check-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #27AE60, #2ecc71);
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(39,174,96,0.3);
+      animation: pulseCheck 1.5s ease-out;
+    }
+    .check-circle svg {
+      width: 44px;
+      height: 44px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+    }
+    @keyframes pulseCheck {
+      0% { transform: scale(0); }
+      60% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    h1.serif {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--brown);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .sub {
+      color: var(--text-2);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .steps-box {
+      background: var(--cream-2);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      margin-bottom: 1.75rem;
+      text-align: left;
+    }
+    .steps-title {
+      font-weight: 700;
+      color: var(--brown);
+      font-size: 0.92rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .step {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      margin-bottom: 0.9rem;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--rust);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .step-content {
+      flex: 1;
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .step-content strong { color: var(--brown); }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--rust);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+    .cta-button:hover {
+      background: var(--brown);
+      transform: translateY(-2px);
+    }
+
+    .help-text {
+      font-size: 0.85rem;
+      color: var(--text-3);
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--cream-3);
+      line-height: 1.6;
+    }
+    .help-text strong { color: var(--brown); }
+    .help-text a { color: var(--rust); text-decoration: none; font-weight: 600; }
+
+    .quote {
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--text-2);
+      margin-top: 1.5rem;
+      padding: 0 0.5rem;
+      line-height: 1.7;
+    }
+
+    .footer-brand {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: var(--text-3);
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="badge">Kỷ Luật Bản Năng · 90 Ngày</div>
+
+  <div class="check-circle">
+    <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg>
+  </div>
+
+  <h1 class="serif">Cảm Ơn Bạn Đã Tin Tưởng</h1>
+  <p class="sub">
+    Chúng tôi đã nhận được thông tin của bạn.<br/>
+    Sau khi chuyển khoản, vui lòng làm theo các bước bên dưới.
+  </p>
+
+  <div class="steps-box">
+    <p class="steps-title">📋 Bước Tiếp Theo</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>Kiểm tra email</strong> trong vòng 30 giây sau khi chuyển khoản. Email từ <strong>lecaothaivl@gmail.com</strong> chứa link truy cập chương trình.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        Nếu không thấy email, kiểm tra <strong>hộp Spam / Quảng cáo</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        Click link <strong>Telegram Group</strong> trong email để vào cộng đồng học viên.
+      </div>
+    </div>
+  </div>
+
+  <a href="https://t.me/klbn90ngay" target="_blank" rel="noopener" class="cta-button">
+    → Vào Telegram Group Ngay
+  </a>
+
+  <p class="quote">
+    "Đừng chỉ học. Hãy bắt đầu hành động ngay từ ngày đầu tiên."
+  </p>
+
+  <div class="help-text">
+    <strong>Cần hỗ trợ?</strong><br/>
+    Nhắn trong Telegram hoặc reply email xác nhận.<br/>
+    Mình sẽ phản hồi trong vòng <strong>24 giờ</strong>.
+  </div>
+
+  <div class="footer-brand">
+    LÊ CAO THÁI · KỶ LUẬT BẢN NĂNG 90 NGÀY
+  </div>
+
+</div>
+
+</body>
+</html>
