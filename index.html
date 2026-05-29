@@ -1121,6 +1121,18 @@
     });
   }
 
+  /* ── Lấy Facebook cookies (_fbp/_fbc) để gửi kèm Conversions API ── */
+  function getFbTracking() {
+    function ck(n){ var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)'); return m?m.pop():''; }
+    var fbp = ck('_fbp');
+    var fbc = ck('_fbc');
+    if (!fbc) {
+      var fbclid = new URLSearchParams(location.search).get('fbclid');
+      if (fbclid) fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+    }
+    return { fbp: fbp, fbc: fbc, event_source_url: location.href };
+  }
+
   /* ── Register form → reveal QR ── */
   function handleRegister(e) {
     e.preventDefault();
@@ -1161,9 +1173,11 @@
     fbq('track', 'InitiateCheckout', { value: 490000, currency: 'VND' });
 
     /* 5. Lưu data vào Google Sheets (non-blocking) */
+    var fb = getFbTracking();
     fetch('https://script.google.com/macros/s/AKfycbxDs3pgyeTqEwdbojIMt0P_2E3-6spYsIZWEQGTPYH94AhBvtkBF0zxlNGz_BRbcoVdKA/exec', {
       method: 'POST',
-      body: JSON.stringify({ name: name, phone: phone, email: email, ck_content: ckContent })
+      body: JSON.stringify({ name: name, phone: phone, email: email, ck_content: ckContent,
+        fbp: fb.fbp, fbc: fb.fbc, event_source_url: fb.event_source_url })
     }).catch(function(){});  /* silent fail · bumps still show regardless */
 
     /* 5. Show Info Summary (thông tin đăng ký) */
@@ -1312,11 +1326,13 @@
     /* 5. Cập nhật Google Sheets với đầy đủ thông tin đơn hàng */
     var bumpInfo = (b1 && b2) ? 'TC + DD' : b1 ? 'TC' : b2 ? 'DD' : 'Không chọn';
     var email = document.getElementById('reg-email').value.trim();
+    var fb = getFbTracking();
     fetch('https://script.google.com/macros/s/AKfycbxDs3pgyeTqEwdbojIMt0P_2E3-6spYsIZWEQGTPYH94AhBvtkBF0zxlNGz_BRbcoVdKA/exec', {
       method: 'POST',
       body: JSON.stringify({
         name: name, phone: phone, email: email,
         bump_selection: bumpInfo, total: totalFmt, ck_content: ckContent,
+        fbp: fb.fbp, fbc: fb.fbc, event_source_url: fb.event_source_url,
         update: true
       })
     }).catch(function(){});
