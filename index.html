@@ -1395,20 +1395,49 @@
     }, 400);
   }
 
-  /* YouTube facade — chỉ tải iframe khi người dùng bấm play */
-  document.querySelectorAll('.yt-facade').forEach(function(el) {
-    el.addEventListener('click', function() {
-      var id = el.getAttribute('data-id');
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&mute=0&controls=1&playsinline=1&rel=0&modestbranding=1';
-      iframe.setAttribute('allow', 'autoplay; encrypted-media');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;display:block;';
-      el.innerHTML = '';
-      el.style.cursor = 'default';
-      el.appendChild(iframe);
-    }, { once: true });
-  });
+  /* YouTube facade — phát 1 chạm có tiếng (kể cả iPhone/Safari) qua YouTube Player API */
+  (function(){
+    var apiReady = false, queued = [];
+    function preloadApi(){
+      if (window.YT && window.YT.Player){ apiReady = true; return; }
+      if (document.getElementById('yt-iframe-api')) return;
+      var s = document.createElement('script');
+      s.id = 'yt-iframe-api';
+      s.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(s);
+    }
+    window.onYouTubeIframeAPIReady = function(){
+      apiReady = true;
+      queued.forEach(function(fn){ fn(); });
+      queued = [];
+    };
+
+    /* Nạp sẵn API khi video sắp lọt vào màn hình → lúc chạm là phát được ngay */
+    var pre = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ preloadApi(); pre.disconnect(); } });
+    }, { rootMargin:'300px' });
+    document.querySelectorAll('.yt-facade').forEach(function(el){ pre.observe(el); });
+
+    document.querySelectorAll('.yt-facade').forEach(function(el){
+      el.addEventListener('click', function(){
+        var id = el.getAttribute('data-id');
+        var holder = document.createElement('div');
+        holder.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;';
+        el.innerHTML = '';
+        el.style.cursor = 'default';
+        el.appendChild(holder);
+        var create = function(){
+          new YT.Player(holder, {
+            videoId: id,
+            playerVars: { autoplay:1, playsinline:1, rel:0, modestbranding:1, controls:1 },
+            events: { onReady: function(e){ e.target.playVideo(); } }
+          });
+        };
+        preloadApi();
+        if (apiReady) create(); else queued.push(create);
+      }, { once: true });
+    });
+  })();
 
 </script>
 </body>
