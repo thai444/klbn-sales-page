@@ -104,7 +104,7 @@
     [style*="text-align:justify"] { text-align: left !important; word-spacing: normal !important; }
     /* Hiệu ứng "tráng gương" — vệt sáng quét ngang làm nổi bật nút hành động */
     .cta-btn, #reg-btn { position: relative; overflow: hidden; }
-    .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:-80%; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%); transform:skewX(-22deg); pointer-events:none; animation: ctaShine 3.8s ease-in-out infinite; }
+    .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:-80%; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%); transform:skewX(-22deg); pointer-events:none; animation: ctaShine 2.8s ease-in-out infinite; }
     @keyframes ctaShine { 0% { left:-80%; } 30% { left:130%; } 100% { left:130%; } }
     @media (prefers-reduced-motion: reduce) { .cta-btn::after, #reg-btn::after { animation: none; } }
     .texture-bg { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47B2A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
