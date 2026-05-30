@@ -1112,7 +1112,7 @@
   const obs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); }, {threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-  /* ── Cuộn neo 1 lần ăn ngay: tự cuộn lại để bù việc ảnh lazy tải xong làm xê dịch vị trí ── */
+  /* ── Cuộn neo "bám đích": tự cuộn lại tới khi vị trí ổn định, bù việc ảnh lazy tải dần làm xê dịch (kể cả cú cuộn dài) ── */
   document.querySelectorAll('a[href^="#"]').forEach(function(link){
     link.addEventListener('click', function(e){
       var id = this.getAttribute('href');
@@ -1120,10 +1120,14 @@
       var target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      var go = function(){ target.scrollIntoView({ behavior:'smooth', block:'start' }); };
-      go();
-      setTimeout(go, 250);
-      setTimeout(go, 600);
+      var start = Date.now(), lastTop = null, stable = 0;
+      (function step(){
+        target.scrollIntoView({ behavior:'smooth', block:'start' });
+        var top = Math.round(target.getBoundingClientRect().top);
+        if (lastTop !== null && Math.abs(top - lastTop) <= 2) stable++; else stable = 0;
+        lastTop = top;
+        if (stable < 4 && Date.now() - start < 3000) setTimeout(step, 160);
+      })();
       if (history.replaceState) history.replaceState(null, '', id);
     });
   });
