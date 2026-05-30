@@ -102,6 +102,9 @@
     #register-form-wrap, #payment, #qr-section, #bump-section, #info-summary { scroll-margin-top: 52px; }
     /* Canh trái tự nhiên cho mọi đoạn văn — canh đều 2 bên gây giãn chữ thưa, xấu trên điện thoại */
     [style*="text-align:justify"] { text-align: left !important; word-spacing: normal !important; }
+    /* Nút quay lại đầu trang — nhỏ, nổi góc dưới, chỉ hiện khi cuộn sâu */
+    #backTop { position:fixed; right:1rem; bottom:92px; z-index:997; width:42px; height:42px; border-radius:50%; background:rgba(44,26,14,0.8); color:#fff; border:none; font-size:1.25rem; line-height:1; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.28); backdrop-filter:blur(4px); }
+    #backTop.show { display:flex; }
     .texture-bg { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47B2A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     @media(max-width:640px){.two-col{grid-template-columns:1fr !important;}.sticky-bar{flex-direction:row;padding:0.55rem 1rem;gap:0.75rem;}.sticky-bar p{font-size:0.7rem !important;}.cta-btn{font-size:0.9rem;padding:0.85rem 1.5rem;}.sticky-cta{font-size:0.8rem !important;padding:0.6rem 1rem !important;white-space:nowrap;}.price-block-inner{padding:1rem 0.85rem !important;}.price-big{font-size:2.2rem !important;}.price-banner{padding:0.65rem 0.9rem !important;margin-bottom:0.75rem !important;}.price-warning{padding:0.55rem 0.75rem !important;margin-top:0.75rem !important;}}
   </style>
@@ -115,9 +118,9 @@
 
 
 <!-- == SECTION 1 · HERO == -->
-<section class="texture-bg hero" style="padding:2.25rem 1.5rem 3rem;text-align:center;background-color:var(--cream);border-bottom:1px solid var(--border);">
+<section class="texture-bg hero" style="padding:1.1rem 1.5rem 2.5rem;text-align:center;background-color:var(--cream);border-bottom:1px solid var(--border);">
   <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:0.9rem;">Kỷ Luật Bản Năng · 90 Ngày · Dành Cho Đàn Ông</p>
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:0.6rem;">Kỷ Luật Bản Năng · 90 Ngày · Dành Cho Đàn Ông</p>
     <h1 class="serif" style="font-size:clamp(2.1rem,6.2vw,3.5rem);font-weight:800;line-height:1.12;color:var(--brown);margin-bottom:1.1rem;">
       Giúp Bạn Thoát <span style="color:var(--rust);">“ĐÁY”</span> Cuộc Đời
     </h1>
@@ -179,7 +182,7 @@
       <div>
         <p style="font-weight:700;color:var(--brown);font-size:1rem;">Lê Cao Thái</p>
         <p style="font-size:0.78rem;color:var(--amber);font-weight:600;margin-bottom:0.35rem;">Người áp dụng Kỷ Luật Bản Năng</p>
-        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.7;">TikTok @lecaothai · 21.6K Followers · Người đã đi qua con đường này trước bạn</p>
+        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.7;">TikTok @lecaothai · 26K Followers · Người đã đi qua con đường này trước bạn</p>
       </div>
     </div>
 
@@ -285,7 +288,7 @@
         <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;z-index:1;position:relative;">🏆</div>
         <div style="flex:1;background:linear-gradient(135deg,#FFF3E0,#FFF8EE);border:2px solid var(--rust);border-radius:10px;padding:1.25rem 1.5rem;">
           <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);margin-bottom:0.4rem;">Hiện Tại · Kết Quả Thực Tế</p>
-          <p style="font-weight:700;color:var(--brown);margin-bottom:0.5rem;font-size:0.95rem;">Kênh TikTok hơn <span style="color:var(--rust);">20.000 Followers</span> và vẫn tăng mỗi ngày</p>
+          <p style="font-weight:700;color:var(--brown);margin-bottom:0.5rem;font-size:0.95rem;">Kênh TikTok hơn <span style="color:var(--rust);">25.000 Followers</span> và vẫn tăng mỗi ngày</p>
           <p style="color:var(--text-2);font-size:0.87rem;line-height:1.8;">Không phải vì tôi tài năng hơn ai. Mà vì tôi đã xây được nền tảng kỷ luật đủ vững để kiên trì khi chưa có kết quả, khi không ai xem, khi muốn bỏ cuộc · và tiếp tục đứng dậy mỗi lần vấp ngã.</p>
         </div>
       </div>
@@ -294,7 +297,7 @@
     <!-- Stats Row -->
     <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:3rem;">
       <div style="text-align:center;padding:1.5rem 1rem;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 2px 10px rgba(44,26,14,0.05);">
-        <p class="serif" style="font-size:2.2rem;font-weight:700;color:var(--rust);line-height:1;">21.6K</p>
+        <p class="serif" style="font-size:2.2rem;font-weight:700;color:var(--rust);line-height:1;">26K</p>
         <p style="font-size:0.73rem;color:var(--text-3);margin-top:0.4rem;line-height:1.4;">Followers<br/>TikTok</p>
       </div>
       <div style="text-align:center;padding:1.5rem 1rem;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 2px 10px rgba(44,26,14,0.05);">
@@ -344,7 +347,7 @@
           <!-- screen -->
           <div style="border-radius:4px;overflow:hidden;width:220px;">
             <img loading="lazy" decoding="async" src="tiktok-proof.jpg"
-                 alt="TikTok Lê Cao Thái 21.6K Followers"
+                 alt="TikTok Lê Cao Thái 26K Followers"
                  style="width:100%;height:auto;display:block;" />
           </div>
           <!-- home bar -->
@@ -357,7 +360,7 @@
       <!-- Stats below phone -->
       <div style="display:flex;justify-content:center;gap:2rem;margin-top:1.75rem;flex-wrap:wrap;">
         <div style="text-align:center;">
-          <p class="serif" style="font-size:1.6rem;font-weight:700;color:var(--rust);line-height:1;">21.6K</p>
+          <p class="serif" style="font-size:1.6rem;font-weight:700;color:var(--rust);line-height:1;">26K</p>
           <p style="font-size:0.72rem;color:var(--text-3);margin-top:0.2rem;">Followers</p>
         </div>
         <div style="width:1px;background:var(--border);"></div>
@@ -1117,6 +1120,9 @@
 </footer>
 
 
+<!-- NÚT QUAY LẠI ĐẦU TRANG -->
+<button id="backTop" type="button" aria-label="Quay lại đầu trang" title="Quay lại đầu trang">↑</button>
+
 <!-- STICKY BAR -->
 <div class="sticky-bar">
   <div>
@@ -1422,6 +1428,14 @@
       document.getElementById('qr-section').scrollIntoView({ behavior:'smooth', block:'start' });
     }, 400);
   }
+
+  /* Nút quay lại đầu trang: hiện khi cuộn sâu, bấm cuộn mượt lên đầu */
+  (function(){
+    var bt = document.getElementById('backTop');
+    if (!bt) return;
+    window.addEventListener('scroll', function(){ bt.classList.toggle('show', window.scrollY > 1200); }, { passive:true });
+    bt.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+  })();
 
   /* Hero video: tự phát; tự BẬT TIẾNG ngay khi người dùng chạm/cuộn lần đầu
      (trình duyệt cấm tự bật tiếng khi CHƯA có tương tác nào — đây là cách gần nhất) */
