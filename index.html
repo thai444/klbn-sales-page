@@ -126,14 +126,12 @@
     <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem auto;max-width:560px;">
       <!-- Video Before -->
       <div style="position:relative;border-radius:14px;overflow:hidden;box-shadow:0 6px 28px rgba(44,26,14,0.18);">
-        <div class="yt-facade" data-id="-h9gKE1_zuA" style="position:relative;width:100%;aspect-ratio:9/16;background:#111;cursor:pointer;" role="button" aria-label="Phát video">
-          <img src="https://i.ytimg.com/vi/-h9gKE1_zuA/hqdefault.jpg" alt="Xem video" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-            <div style="width:64px;height:64px;border-radius:50%;background:rgba(176,90,42,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,0.4);">
-              <span style="border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #fff;margin-left:5px;"></span>
-            </div>
-          </div>
-        </div>
+        <!-- VIDEO ĐẦU TRANG · tự host MP4 → phát 1 chạm có tiếng trên iPhone -->
+        <!-- File: video-hero.mp4 (cùng thư mục index.html) · #t=0.5 = lấy khung hình 0.5s làm ảnh chờ -->
+        <video preload="metadata" playsinline webkit-playsinline controls
+          style="position:relative;display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#111;">
+          <source src="video-hero.mp4#t=0.5" type="video/mp4" />
+        </video>
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(44,26,14,0.82));pointer-events:none;"></div>
         <div style="position:absolute;top:0.6rem;left:0.6rem;background:rgba(44,26,14,0.7);color:#fff;font-size:0.62rem;font-weight:800;letter-spacing:0.12em;padding:0.22rem 0.55rem;border-radius:4px;text-transform:uppercase;">TRƯỚC</div>
         <p style="position:absolute;bottom:0.75rem;left:0;right:0;text-align:center;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;">Mất phương hướng · 2025</p>
