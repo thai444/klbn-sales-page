@@ -106,6 +106,8 @@
     body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
     h1, h2, h3, .serif { text-wrap: balance; }       /* tiêu đề ngắt dòng cân đối, không lệch */
     p, li { text-wrap: pretty; }                       /* tránh chữ mồ côi 1 từ ở dòng cuối */
+    /* THỬ NGHIỆM: canh đều (justify) riêng phần "Câu chuyện" để so sánh */
+    #origin-story p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
     /* Hiệu ứng "tráng gương" — vệt sáng quét ngang làm nổi bật nút hành động */
     .cta-btn, #reg-btn { position: relative; overflow: hidden; }
     .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:-80%; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.62) 50%, transparent 100%); transform:skewX(-22deg); pointer-events:none; animation: ctaShine 2.5s ease-in-out infinite; }
@@ -175,7 +177,7 @@
 
 
 <!-- == SECTION 2 · ORIGIN STORY == -->
-<section style="padding:4.5rem 1.5rem;background:var(--cream-2);">
+<section id="origin-story" style="padding:4.5rem 1.5rem;background:var(--cream-2);">
   <div style="max-width:700px;margin:0 auto;">
     <p class="reveal" style="font-size:0.75rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">Câu chuyện thật</p>
     <h2 class="serif reveal" style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;color:var(--brown);margin-bottom:2rem;line-height:1.25;">
