@@ -102,6 +102,10 @@
     #register-form-wrap, #payment, #qr-section, #bump-section, #info-summary { scroll-margin-top: 52px; }
     /* Canh trái tự nhiên cho mọi đoạn văn — canh đều 2 bên gây giãn chữ thưa, xấu trên điện thoại */
     [style*="text-align:justify"] { text-align: left !important; word-spacing: normal !important; }
+    /* Typography "dân chuyên": chữ sắc nét + ngắt dòng gọn gàng, không justify */
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    h1, h2, h3, .serif { text-wrap: balance; }       /* tiêu đề ngắt dòng cân đối, không lệch */
+    p, li { text-wrap: pretty; }                       /* tránh chữ mồ côi 1 từ ở dòng cuối */
     /* Hiệu ứng "tráng gương" — vệt sáng quét ngang làm nổi bật nút hành động */
     .cta-btn, #reg-btn { position: relative; overflow: hidden; }
     .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:-80%; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.62) 50%, transparent 100%); transform:skewX(-22deg); pointer-events:none; animation: ctaShine 2.5s ease-in-out infinite; }
@@ -1024,6 +1028,9 @@
       <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Tôi đang ở giai đoạn khó khăn về tài chính. Có đáng đầu tư không?</span><span class="faq-icon">+</span></div><div class="faq-answer">Câu hỏi thực sự là: Chi phí của việc không thay đổi là bao nhiêu? Không phải về tiền mà về thời gian, về cơ hội, về sức khỏe tinh thần. 490.000đ là một con số nhỏ so với những gì bạn mất khi tiếp tục sống trong vòng lặp cũ thêm 90 ngày.</div></div>
       <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Tôi ở ngoài Hà Nội/TP.HCM. Tôi có tham gia được không?</span><span class="faq-icon">+</span></div><div class="faq-answer">Chương trình 100% online. Bạn có thể tham gia từ bất kỳ đâu có kết nối internet.</div></div>
       <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Nếu tôi không hài lòng thì sao?</span><span class="faq-icon">+</span></div><div class="faq-answer">Cam kết hoàn tiền 100% trong 30 ngày nếu bạn đã thực hiện đầy đủ bài tập tuần 1 đến 3 và tham gia live Q&A đầu tiên. Điều kiện tồn tại để bảo vệ cả hai phía, mình muốn người cam kết, không phải người xem cho có.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Khác gì xem video miễn phí trên TikTok của anh?</span><span class="faq-icon">+</span></div><div class="faq-answer">Video TikTok cho bạn cảm hứng và vài mẹo lẻ, nhưng rời rạc, xem xong vài hôm là quên. Kỷ Luật Bản Năng là một hệ thống 90 ngày có lộ trình: biết hôm nay làm gì, mai làm gì, có bài tập, có cộng đồng, có người dẫn khi bạn mất đà. Khác nhau như xem clip tập gym lẻ tẻ và có một giáo án kèm huấn luyện viên đi cùng.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Làm sao tin được? Có phải lừa đảo không?</span><span class="faq-icon">+</span></div><div class="faq-answer">Hoàn toàn hiểu sự cẩn trọng của bạn. Mình là Lê Cao Thái, công khai mặt mũi và hành trình thật trên TikTok @lecaothai (26K follower, nhiều video triệu view). Và có cam kết hoàn tiền 100% nếu bạn làm đủ mà không thấy giá trị. Rủi ro thuộc về mình, không phải bạn.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Tôi không rành công nghệ, có theo được không?</span><span class="faq-icon">+</span></div><div class="faq-answer">Được. Bạn nhận link qua email, xem video, đọc tài liệu PDF và vào nhóm Telegram. Chỉ cần dùng được điện thoại và email là tham gia được. Có vướng gì cứ nhắn, mình hướng dẫn từng bước.</div></div>
     </div>
 
     <!-- Final CTA -->
