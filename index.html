@@ -116,7 +116,7 @@
     .guarantee-badge { display:inline-flex; align-items:baseline; gap:0.35rem; background:linear-gradient(135deg,#1F7A4D,#2EA86A); color:#fff; padding:0.5rem 1.4rem; border-radius:99px; box-shadow:0 8px 22px rgba(31,122,77,0.35); }
     @media (prefers-reduced-motion: reduce) { .guarantee-box::after { animation: none; } }
     .texture-bg { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47B2A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    @media(max-width:640px){.two-col{grid-template-columns:1fr !important;}.sticky-bar{flex-direction:row;padding:0.55rem 1rem;gap:0.75rem;}.sticky-bar p{font-size:0.7rem !important;}.cta-btn{font-size:0.9rem;padding:0.85rem 1.5rem;}.sticky-cta{font-size:0.8rem !important;padding:0.6rem 1rem !important;white-space:nowrap;}.price-block-inner{padding:1rem 0.85rem !important;}.price-big{font-size:2.2rem !important;}.price-banner{padding:0.65rem 0.9rem !important;margin-bottom:0.75rem !important;}.price-warning{padding:0.55rem 0.75rem !important;margin-top:0.75rem !important;}}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr !important;}.sticky-bar{flex-direction:row;padding:0.55rem 1rem;gap:0.75rem;}.sticky-bar p{font-size:0.76rem !important;}.cta-btn{font-size:0.9rem;padding:0.85rem 1.5rem;}.sticky-cta{font-size:0.8rem !important;padding:0.6rem 1rem !important;white-space:nowrap;}.price-block-inner{padding:1rem 0.85rem !important;}.price-big{font-size:2.2rem !important;}.price-banner{padding:0.65rem 0.9rem !important;margin-bottom:0.75rem !important;}.price-warning{padding:0.55rem 0.75rem !important;margin-top:0.75rem !important;}}
   </style>
 </head>
 <body>
@@ -130,7 +130,7 @@
 <!-- == SECTION 1 · HERO == -->
 <section class="texture-bg hero" style="padding:1.1rem 1.5rem 2.5rem;text-align:center;background-color:var(--cream);border-bottom:1px solid var(--border);">
   <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:0.7rem;">90 Ngày · Dành Cho Đàn Ông</p>
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber);margin-bottom:0.7rem;">90 Ngày · Dành Cho Đàn Ông</p>
     <h1 class="serif" style="font-size:clamp(1.7rem,4.6vw,2.6rem);font-weight:800;line-height:1.25;color:var(--brown);margin-bottom:1.1rem;">
       <span style="color:var(--rust);">Kỷ Luật Bản Năng:</span> Thoát Khỏi <span style="color:var(--rust);">"Đáy"</span> Cuộc Đời Và Trở Thành Phiên Bản Tốt Hơn Của Chính Mình Trong <span style="color:var(--rust);">90 Ngày</span>.
     </h1>
@@ -142,15 +142,15 @@
       <!-- Video Before -->
       <div style="position:relative;border-radius:14px;overflow:hidden;box-shadow:0 6px 28px rgba(44,26,14,0.18);">
         <!-- VIDEO ĐẦU TRANG · tự phát tắt tiếng (như đối thủ) · chạm nút để bật tiếng -->
-        <video id="heroVid" autoplay muted loop playsinline webkit-playsinline preload="auto"
+        <video id="heroVid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="video-hero-poster.jpg"
           style="position:relative;display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#111;">
           <source src="video-hero.mp4" type="video/mp4" />
         </video>
         <button id="heroSound" type="button" aria-label="Bật âm thanh"
-          style="position:absolute;top:0.55rem;right:0.55rem;z-index:4;background:rgba(44,26,14,0.78);color:#fff;border:none;border-radius:99px;padding:0.32rem 0.7rem;font-size:0.7rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;backdrop-filter:blur(4px);">🔇 Bật tiếng</button>
+          style="position:absolute;top:0.55rem;right:0.55rem;z-index:4;background:rgba(44,26,14,0.78);color:#fff;border:none;border-radius:99px;padding:0.32rem 0.7rem;font-size:0.76rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;backdrop-filter:blur(4px);">🔇 Bật tiếng</button>
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(44,26,14,0.82));pointer-events:none;"></div>
         <div style="position:absolute;top:0.6rem;left:0.6rem;background:rgba(44,26,14,0.7);color:#fff;font-size:0.62rem;font-weight:800;letter-spacing:0.12em;padding:0.22rem 0.55rem;border-radius:4px;text-transform:uppercase;">TRƯỚC</div>
-        <p style="position:absolute;bottom:0.75rem;left:0;right:0;text-align:center;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;">Mất phương hướng · 2025</p>
+        <p style="position:absolute;bottom:0.75rem;left:0;right:0;text-align:center;color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;">Mất phương hướng · 2025</p>
       </div>
       <!-- Photo After -->
       <div style="position:relative;border-radius:14px;overflow:hidden;box-shadow:0 6px 28px rgba(176,90,42,0.28);border:2px solid var(--amber);">
@@ -158,7 +158,7 @@
           style="width:100%;height:100%;object-fit:cover;object-position:center;aspect-ratio:9/16;display:block;" />
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(176,90,42,0.8));pointer-events:none;"></div>
         <div style="position:absolute;top:0.6rem;left:0.6rem;background:var(--amber);color:#fff;font-size:0.62rem;font-weight:800;letter-spacing:0.12em;padding:0.22rem 0.55rem;border-radius:4px;text-transform:uppercase;">SAU ✓</div>
-        <p style="position:absolute;bottom:0.75rem;left:0;right:0;text-align:center;color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;">Tự do · Bản lĩnh · 2026</p>
+        <p style="position:absolute;bottom:0.75rem;left:0;right:0;text-align:center;color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;">Tự do · Bản lĩnh · 2026</p>
       </div>
     </div>
 
@@ -178,20 +178,20 @@
 <!-- == SECTION 1B · NỖI ĐAU (chuyển lên trước câu chuyện) == -->
 <section class="texture-bg" style="padding:2.5rem 1.5rem;background:#2C1A0E;">
   <div style="max-width:700px;margin:0 auto;">
-    <p class="reveal" style="font-size:0.74rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber-l);margin-bottom:1.25rem;text-align:center;">Dành cho người đàn ông đang loay hoay</p>
+    <p class="reveal" style="font-size:0.8rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--amber-l);margin-bottom:1.25rem;text-align:center;">Dành cho người đàn ông đang loay hoay</p>
     <p class="serif reveal" style="color:#FAF6F0;font-size:clamp(1.3rem,3.6vw,1.9rem);font-weight:700;line-height:1.5;text-align:center;max-width:640px;margin:0 auto 1.75rem;">Thiếu kỷ luật không quật ngã bạn ngay. Nó <span style="color:var(--amber-l);">bào mòn bạn từ từ</span>, cho tới ngày bạn nhìn lại và không còn nhận ra cuộc đời mình.</p>
 
     <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
       <div class="reveal" style="padding:1.5rem;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-left:3px solid var(--amber);">
-        <p style="color:var(--amber-l);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn là trụ cột gia đình</p>
+        <p style="color:var(--amber-l);font-size:0.76rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn là trụ cột gia đình</p>
         <p style="color:#C9B8A0;font-size:0.93rem;line-height:1.8;">Cả nhà dựa vào bạn: Kinh tế, con cái, cha mẹ già, người vợ đặt niềm tin nơi bạn. Thiếu kỷ luật, thu nhập bấp bênh, việc quan trọng cứ trì hoãn, sức khỏe đi xuống, bạn dễ cáu gắt. Áp lực dồn lên hôn nhân. Con cái lớn lên thiếu một người cha vững vàng để noi theo. Gánh nặng đó mỗi ngày một lớn hơn.</p>
       </div>
       <div class="reveal" style="padding:1.5rem;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-left:3px solid var(--amber);">
-        <p style="color:var(--amber-l);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn còn trẻ, chưa gia đình</p>
+        <p style="color:var(--amber-l);font-size:0.76rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn còn trẻ, chưa gia đình</p>
         <p style="color:#C9B8A0;font-size:0.93rem;line-height:1.8;">Tuổi trẻ tưởng còn dài. Bạn ham vui, ngại học, lười rèn kỹ năng, cứ "để mai tính". Nhưng mỗi ngày trôi qua, bạn bè vượt lên, còn bạn vẫn loay hoay. Vài năm nữa, khoảng cách đó không còn lấp được. Một người đàn ông không xây kỷ luật từ sớm sẽ chạy theo sau cả đời.</p>
       </div>
       <div class="reveal" style="padding:1.5rem;border-radius:10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-left:3px solid var(--amber);">
-        <p style="color:var(--amber-l);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn đang bế tắc trong công việc</p>
+        <p style="color:var(--amber-l);font-size:0.76rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Nếu bạn đang bế tắc trong công việc</p>
         <p style="color:#C9B8A0;font-size:0.93rem;line-height:1.8;">Bạn làm 12 đến 14 tiếng mỗi ngày trong môi trường độc hại, kiệt sức. Bạn muốn bước ra, đổi hướng, nhưng thiếu kỹ năng, thiếu tự tin, lại thêm gánh nặng gia đình nên không dám mạo hiểm. Những năm tháng thiếu kỷ luật khiến bạn chưa kịp trang bị cho mình một lối thoát.</p>
       </div>
     </div>
@@ -230,13 +230,13 @@
     </p>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;">
-      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Vấp ngã</p>
+      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Vấp ngã</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Một khoản đầu tư thất bại đã lấy đi của mình <strong style="color:var(--rust);">3,6 tỷ đồng</strong>.</p>
       <p style="color:var(--text-2);line-height:1.85;">Đó là số tiền mình tích góp, vay mượn, và đặt cả niềm tin vào đó.</p>
     </div>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;border-left:4px solid var(--rust);">
-      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Chạm đáy</p>
+      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Chạm đáy</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình rơi vào hoảng loạn. Đêm nào cũng trằn trọc, sáng mở mắt ra là một cục đá đè lên ngực.</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Số nợ treo lơ lửng trên đầu mình mỗi ngày. Tiền lãi vẫn chạy đều. Tiền sinh hoạt trong nhà vẫn phải lo. Mình nhìn cha mẹ đã già mà thắt lòng, tuổi này đáng lẽ ông bà được nhờ con, vậy mà vẫn phải lo ngược cho mình.</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình lao vào làm việc 12 đến 14 tiếng mỗi ngày, cày cuốc để trả nợ. Nhưng số nợ vẫn nằm đó, mình không biết đến bao giờ mới trả hết. Càng làm mình càng kiệt sức, và có những lúc mình nghĩ cuộc đời mình coi như đã bỏ đi.</p>
@@ -248,40 +248,40 @@
     </div>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;">
-      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Thức tỉnh</p>
+      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Thức tỉnh</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Rồi một ngày, mình nhìn cha mẹ đã già. Nhìn vợ. Nhìn con.</p>
       <p class="serif" style="font-size:1.1rem;font-style:italic;color:var(--brown);border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1rem;">Mình không thể sống mãi như thế này. Mình phải thay đổi. Phải khác đi.</p>
       <p style="color:var(--text-2);line-height:1.85;">Khoảnh khắc đó mình nhận ra một sự thật. Một người đàn ông không có kỷ luật thì chẳng giữ được gì. Không giữ được tiền. Không giữ được sức khỏe. Không giữ được cả gia đình mình.</p>
     </div>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;">
-      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Bắt đầu</p>
+      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Bắt đầu</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình không bắt đầu bằng một kế hoạch hoành tráng. Mình bắt đầu bằng thứ nhỏ nhất: Ngủ đúng giờ, dậy đúng giờ, đọc sách mỗi ngày, tập gym trở lại.</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:1rem;">Mỗi ngày một chút. Mình giữ đúng từng cam kết nhỏ với chính mình.</p>
       <p style="font-weight:700;color:var(--brown);">Và kỷ luật đã giải phóng mình. Nó là thứ duy nhất kéo mình ra khỏi đáy.</p>
     </div>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;background:linear-gradient(135deg,#FFF8EE,#FFF3E0);">
-      <p style="display:inline-block;background:var(--rust);color:#fff;font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Sau 90 ngày</p>
+      <p style="display:inline-block;background:var(--rust);color:#fff;font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Sau 90 ngày</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">90 ngày sau, mình vẫn là mình, nhưng là phiên bản đã thức tỉnh.</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình đọc sách mỗi ngày, tập gym đều, thần sắc tốt hơn, yêu đời hơn. Mình hiểu bản thân hơn, biết rõ điểm mạnh điểm yếu của mình.</p>
-      <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Lần đầu sau rất lâu, mình lại có <strong style="color:var(--rust);">ƯỚC MƠ</strong>, có <strong style="color:var(--rust);">MỤC TIÊU</strong>, và có một <strong style="color:var(--rust);">KẾ HOẠCH ĐỂ HÀNH ĐỘNG</strong>: để trả nợ, để trở thành <strong style="color:var(--rust);">MỘT PHIÊN BẢN TỐT HƠN</strong> của chính mình, để có thể <strong style="color:var(--rust);">SỐNG MỘT CUỘC ĐỜI MÀ MÌNH MƠ ƯỚC</strong>.</p>
+      <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Lần đầu sau rất lâu, mình lại có <strong style="color:var(--rust);">ƯỚC MƠ</strong>, có <strong style="color:var(--rust);">MỤC TIÊU</strong>, và có một <strong style="color:var(--rust);">KẾ HOẠCH ĐỂ HÀNH ĐỘNG</strong>: Để trả nợ, để trở thành <strong style="color:var(--rust);">MỘT PHIÊN BẢN TỐT HƠN</strong> của chính mình, để có thể <strong style="color:var(--rust);">SỐNG MỘT CUỘC ĐỜI MÀ MÌNH MƠ ƯỚC</strong>.</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình xây kênh TikTok, giờ đã hơn <strong style="color:var(--rust);">26.000 người theo dõi</strong>, để truyền <strong style="color:var(--rust);">ĐỘNG LỰC</strong> cho mọi người, nhiều video triệu view, hàng nghìn bình luận động viên.</p>
       <p style="color:var(--text-2);line-height:1.85;">Công việc thuận lợi hơn. Và quan trọng nhất, không khí trong nhà ấm trở lại. <strong style="color:var(--brown);">Gia đình mình hạnh phúc hơn, dù vẫn đang trả nợ.</strong></p>
       <!-- Trước → Sau (chuyển vào đây) -->
       <div style="margin-top:1.5rem;">
-        <p style="font-size:0.78rem;font-weight:600;color:var(--text-3);text-align:center;margin-bottom:0.85rem;letter-spacing:0.08em;text-transform:uppercase;">Trước → Sau</p>
+        <p style="font-size:1.05rem;font-weight:800;text-align:center;margin-bottom:0.85rem;letter-spacing:0.06em;text-transform:uppercase;"><span style="color:var(--text-3);">Trước</span> <span style="color:var(--rust);">→</span> <span style="color:var(--brown);">Sau</span></p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
           <div style="border-radius:12px;overflow:hidden;position:relative;">
             <img loading="lazy" decoding="async" src="photo-before.jpg" alt="Trước · 2025 mất phương hướng" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;display:block;" />
             <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(44,26,14,0.85));padding:0.75rem;text-align:center;">
-              <span style="color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;">2025 · MẤT PHƯƠNG HƯỚNG</span>
+              <span style="color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;">2025 · MẤT PHƯƠNG HƯỚNG</span>
             </div>
           </div>
           <div style="border-radius:12px;overflow:hidden;position:relative;border:2px solid var(--amber);">
             <img loading="lazy" decoding="async" src="photo-after.jpg" alt="Sau · 2026 hành trình mới" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;display:block;" />
             <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(176,90,42,0.9));padding:0.75rem;text-align:center;">
-              <span style="color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;">2026 · HÀNH TRÌNH MỚI ✓</span>
+              <span style="color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;">2026 · HÀNH TRÌNH MỚI ✓</span>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@
     </div>
 
     <div class="card reveal" style="padding:1.75rem;margin-bottom:1.5rem;">
-      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Chia sẻ</p>
+      <p style="display:inline-block;background:var(--cream-3);color:var(--rust);font-size:0.74rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:99px;margin-bottom:1rem;">Chia sẻ</p>
       <p style="color:var(--text-2);line-height:1.85;margin-bottom:0.85rem;">Mình bắt đầu chia sẻ con đường này. Điều bất ngờ là những người làm theo cũng thay đổi: Họ ngủ lại được, tập luyện lại được, tìm lại được hướng đi.</p>
       <p style="color:var(--text-2);line-height:1.85;">Đó là lúc mình hiểu: Đây là một hệ thống có thể lặp lại. Ai làm đúng và kiên trì đều sẽ có kết quả.</p>
     </div>
@@ -326,7 +326,7 @@
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Ngủ đúng giờ trở lại. Khôi phục được thói quen tập Gym sau 18 tháng bỏ. Quan trọng hơn, lần đầu tiên sau 4 tháng, Minh cảm thấy mình đang kiểm soát cuộc sống của mình, không phải bị cuộc sống kéo đi.</p>
         <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Mình không nghĩ kỷ luật lại cho mình cảm giác tự do. Nhưng đúng là như vậy."</p>
         <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
-          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Minh</p>
+          <p style="font-size:0.78rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Minh</p>
           <img loading="lazy" decoding="async" src="feedback-minh.jpg" alt="Feedback từ Minh" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
         </div>
       </div>
@@ -341,7 +341,7 @@
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Thiết lập lại nhịp sinh học hoàn toàn. Tìm ra hướng đi mới và bắt đầu xây dựng kỹ năng trong lĩnh vực mình thực sự muốn. Tháng thứ 4 sau chương trình: Nhận được Offer lương cao hơn <strong style="color:var(--rust);">40%</strong> so với công việc cũ.</p>
         <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Thứ thay đổi không phải kỹ năng của mình. Thứ thay đổi là mình tin rằng mình có thể, và đó là thứ duy nhất quan trọng lúc bắt đầu."</p>
         <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
-          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Hùng</p>
+          <p style="font-size:0.78rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Hùng</p>
           <img loading="lazy" decoding="async" src="feedback-hung.jpg" alt="Feedback từ Hùng" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
         </div>
       </div>
@@ -356,7 +356,7 @@
         <p style="color:var(--text-2);font-size:0.9rem;line-height:1.8;margin-bottom:1rem;">Sau 90 ngày: Lấy lại được 2 giờ mỗi ngày nhờ hệ thống ngày rõ ràng hơn. Mối quan hệ với vợ cải thiện đáng kể, vì khi Thắng ổn hơn bên trong, anh có nhiều hơn để cho đi bên ngoài.</p>
         <p class="serif" style="color:var(--brown-2);font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;line-height:1.7;margin-bottom:1.25rem;">"Mình không cần thêm thời gian. Mình cần biết cách dùng thời gian mình đang có. Đó là thứ mình học được."</p>
         <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
-          <p style="font-size:0.72rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Thắng</p>
+          <p style="font-size:0.78rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">📩 Tin nhắn thực tế từ Thắng</p>
           <img loading="lazy" decoding="async" src="feedback-thang.jpg" alt="Feedback từ Thắng" style="width:100%;border-radius:10px;box-shadow:0 3px 14px rgba(44,26,14,0.13);display:block;" />
         </div>
       </div>
@@ -412,12 +412,12 @@
       <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:1.75rem;flex-wrap:wrap;">
         <div style="text-align:center;">
           <p class="serif" style="font-size:1.6rem;font-weight:700;color:var(--rust);line-height:1;">26K</p>
-          <p style="font-size:0.72rem;color:var(--text-3);margin-top:0.2rem;">Followers</p>
+          <p style="font-size:0.78rem;color:var(--text-3);margin-top:0.2rem;">Followers</p>
         </div>
         <div style="width:1px;background:var(--border);"></div>
         <div style="text-align:center;">
           <p class="serif" style="font-size:1.6rem;font-weight:700;color:var(--amber);line-height:1;">242.3K</p>
-          <p style="font-size:0.72rem;color:var(--text-3);margin-top:0.2rem;">Lượt Thích</p>
+          <p style="font-size:0.78rem;color:var(--text-3);margin-top:0.2rem;">Lượt Thích</p>
         </div>
       </div>
       <p style="font-size:0.78rem;color:var(--text-3);margin-top:1rem;font-style:italic;">Xây từ con số 0, sau thất bại đầu tư, nhờ kỷ luật mỗi ngày.</p>
@@ -450,7 +450,7 @@
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="two-col reveal">
       <div style="background:#FFF5F5;border:1px solid #F4CCCC;border-radius:12px;padding:1.75rem;">
-        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#C0392B;margin-bottom:1.25rem;">Những Thứ Bạn Sẽ Không Còn Phải Sống Cùng:</p>
+        <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#C0392B;margin-bottom:1.25rem;">Những Thứ Bạn Sẽ Không Còn Phải Sống Cùng:</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.9rem;">
           <li style="color:var(--text-3);font-size:0.88rem;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#C0392B;font-weight:700;">✕</span>Cảm giác tội lỗi khi lãng phí cả một ngày mà không làm được gì có ý nghĩa</li>
           <li style="color:var(--text-3);font-size:0.88rem;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#C0392B;font-weight:700;">✕</span>Vòng lặp: Tự hứa → thất bại → tự trách → tự hứa lại mà không bao giờ thoát ra</li>
@@ -461,7 +461,7 @@
         </ul>
       </div>
       <div style="background:#F6FCF3;border:1px solid #C3E6BB;border-radius:12px;padding:1.75rem;">
-        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#27AE60;margin-bottom:1.25rem;">Những Gì Bạn Sẽ Có Thay Vào Đó:</p>
+        <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#27AE60;margin-bottom:1.25rem;">Những Gì Bạn Sẽ Có Thay Vào Đó:</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.9rem;">
           <li style="color:var(--text-2);font-size:0.88rem;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#27AE60;">✓</span>Một buổi sáng có cấu trúc, biết mình làm gì, tại sao, và nó dẫn đến đâu</li>
           <li style="color:var(--text-2);font-size:0.88rem;padding-left:1.25rem;position:relative;line-height:1.6;"><span style="position:absolute;left:0;color:#27AE60;">✓</span>Cơ thể khỏe hơn, đầu óc sắc bén hơn, năng lượng đủ để làm những việc quan trọng</li>
@@ -552,7 +552,7 @@
     <!-- Mapping 5 Trụ Cột × 4 Giai Đoạn -->
     <div class="reveal" style="margin-top:2rem;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;">
       <div style="background:var(--brown);padding:0.85rem 1.5rem;text-align:center;">
-        <p style="color:var(--amber-l);font-size:0.72rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;">5 Trụ Cột × 4 Giai Đoạn · Cái Gì Được Xây Khi Nào</p>
+        <p style="color:var(--amber-l);font-size:0.78rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;">5 Trụ Cột × 4 Giai Đoạn · Cái Gì Được Xây Khi Nào</p>
       </div>
       <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
@@ -707,7 +707,7 @@
     <div style="display:flex;flex-direction:column;gap:1.25rem;">
       <div class="card reveal" style="padding:2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-          <div style="background:var(--rust);color:#fff;font-weight:700;font-size:0.72rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 1</div>
+          <div style="background:var(--rust);color:#fff;font-weight:700;font-size:0.78rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 1</div>
           <div><p style="font-weight:700;color:var(--brown);">Tuần 1 đến 3: ĐÁNH THỨC</p><p style="font-size:0.8rem;color:var(--text-3);">Thiết lập lại nền tảng sinh học và tẩy độc môi trường sống</p></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.85rem;">
@@ -723,7 +723,7 @@
 
       <div class="card reveal" style="padding:2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-          <div style="background:var(--amber);color:#fff;font-weight:700;font-size:0.72rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 2</div>
+          <div style="background:var(--amber);color:#fff;font-weight:700;font-size:0.78rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 2</div>
           <div><p style="font-weight:700;color:var(--brown);">Tuần 4 đến 7: XÂY DỰNG</p><p style="font-size:0.8rem;color:var(--text-3);">Tạo hệ thống ngày và xây dựng bản sắc mới</p></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.85rem;">
@@ -739,7 +739,7 @@
 
       <div class="card reveal" style="padding:2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-          <div style="background:var(--brown-3);color:#fff;font-weight:700;font-size:0.72rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 3</div>
+          <div style="background:var(--brown-3);color:#fff;font-weight:700;font-size:0.78rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 3</div>
           <div><p style="font-weight:700;color:var(--brown);">Tuần 8 đến 11: THÀNH THẠO</p><p style="font-size:0.8rem;color:var(--text-3);">Nâng cấp kiểm soát cảm xúc và phục hồi sau thất bại</p></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.85rem;">
@@ -755,7 +755,7 @@
 
       <div class="reveal" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);border:2px solid var(--amber);border-radius:12px;padding:2rem;">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-          <div style="background:linear-gradient(135deg,var(--amber),var(--amber-l));color:#fff;font-weight:700;font-size:0.72rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 4</div>
+          <div style="background:linear-gradient(135deg,var(--amber),var(--amber-l));color:#fff;font-weight:700;font-size:0.78rem;padding:0.35rem 0.75rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;">Giai Đoạn 4</div>
           <div><p style="font-weight:700;color:var(--brown);">Tuần 12: TIẾP NỐI</p><p style="font-size:0.8rem;color:var(--text-3);">Thiết kế hệ thống duy trì kết quả sau 90 ngày</p></div>
         </div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;color:var(--text-2);font-size:0.9rem;">
@@ -790,8 +790,8 @@
       <div class="price-block-inner" style="padding:2rem;text-align:center;background:linear-gradient(135deg,#FFF8EE,#FFF3DC);">
         <!-- 50 người banner -->
         <div class="price-banner" style="background:linear-gradient(135deg,#B05A2A,#8B3E18);border-radius:10px;padding:0.85rem 1.25rem;margin-bottom:1.25rem;display:inline-block;max-width:100%;">
-          <p style="color:#fff;font-size:0.72rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.2rem;">Giá Hỗ Trợ Đặc Biệt · Chỉ 50 Người Đầu Tiên</p>
-          <p style="color:rgba(255,255,255,0.85);font-size:0.72rem;line-height:1.5;">Mình cần <strong style="color:#FFD580;">case study thực tế</strong> để chứng minh hệ thống. Bù lại, bạn được vào với mức giá <strong style="color:#FFD580;">thấp hơn 91%</strong> so với giá thực tế sau này.</p>
+          <p style="color:#fff;font-size:0.78rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.2rem;">Giá Hỗ Trợ Đặc Biệt · Chỉ 50 Người Đầu Tiên</p>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.78rem;line-height:1.5;">Mình cần <strong style="color:#FFD580;">case study thực tế</strong> để chứng minh hệ thống. Bù lại, bạn được vào với mức giá <strong style="color:#FFD580;">thấp hơn 91%</strong> so với giá thực tế sau này.</p>
         </div>
         <p style="font-size:0.82rem;color:var(--text-3);margin-bottom:0.3rem;text-decoration:line-through;">Giá thực tế: 5.390.000đ</p>
         <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:0.4rem;">Giá hỗ trợ lấy case study:</p>
@@ -851,7 +851,7 @@
             <span id="reg-btn-text">▶ TIẾP THEO · NHẬN MÃ QR THANH TOÁN</span>
           </button>
         </div>
-        <p style="text-align:center;font-size:0.72rem;color:#9B7A5A;margin-top:1rem;">🔒 Thông tin bảo mật · Chỉ dùng để gửi link khóa học</p>
+        <p style="text-align:center;font-size:0.78rem;color:#9B7A5A;margin-top:1rem;">🔒 Thông tin bảo mật · Chỉ dùng để gửi link khóa học</p>
         <p style="text-align:center;font-size:0.82rem;color:var(--rust);font-style:italic;margin-top:0.75rem;line-height:1.6;">"Đừng để bản thân của 90 ngày sau phải hối tiếc vì hôm nay đã chần chừ."</p>
       </form>
     </div>
@@ -860,7 +860,7 @@
     <div id="info-summary" style="display:none;margin-top:1rem;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;">
         <div style="flex:1;min-width:200px;">
-          <p style="font-size:0.68rem;color:var(--text-3);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.35rem;">✓ Thông Tin Đăng Ký</p>
+          <p style="font-size:0.74rem;color:var(--text-3);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.35rem;">✓ Thông Tin Đăng Ký</p>
           <p id="info-name" style="font-weight:700;color:var(--brown);font-size:0.95rem;margin-bottom:0.15rem;"></p>
           <p id="info-contact" style="font-size:0.8rem;color:var(--text-2);line-height:1.5;"></p>
         </div>
@@ -918,7 +918,7 @@
         <button onclick="confirmBumps()" style="width:100%;background:var(--rust);color:#fff;font-weight:700;font-size:1rem;padding:1.1rem 2rem;border-radius:8px;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.03em;">
           ▶ XÁC NHẬN · NHẬN MÃ QR THANH TOÁN
         </button>
-        <p style="text-align:center;font-size:0.72rem;color:var(--text-3);margin-top:0.75rem;">Không muốn thêm? Bấm nút trên để tiếp tục với đơn hàng gốc.</p>
+        <p style="text-align:center;font-size:0.78rem;color:var(--text-3);margin-top:0.75rem;">Không muốn thêm? Bấm nút trên để tiếp tục với đơn hàng gốc.</p>
       </div>
     </div>
 
@@ -983,7 +983,7 @@
         <button onclick="confirmPayment()" id="paid-btn" style="width:100%;max-width:340px;background:linear-gradient(135deg,#27AE60,#2ecc71);color:#fff;font-weight:700;font-size:0.97rem;padding:1rem 2rem;border-radius:8px;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.03em;box-shadow:0 4px 16px rgba(39,174,96,0.25);transition:all 0.2s;">
           ✓ TÔI ĐÃ CHUYỂN KHOẢN
         </button>
-        <p style="color:var(--text-3);font-size:0.72rem;margin-top:0.6rem;font-style:italic;">Bấm sau khi đã hoàn tất chuyển khoản để xem hướng dẫn tiếp theo</p>
+        <p style="color:var(--text-3);font-size:0.78rem;margin-top:0.6rem;font-style:italic;">Bấm sau khi đã hoàn tất chuyển khoản để xem hướng dẫn tiếp theo</p>
       </div>
     </div>
 
@@ -1048,7 +1048,7 @@
   <div>
 
     <!-- Header -->
-    <p class="reveal" style="font-size:0.72rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--amber-l);margin-bottom:1rem;text-align:center;">Chưa Sẵn Sàng Đăng Ký Ngay?</p>
+    <p class="reveal" style="font-size:0.78rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--amber-l);margin-bottom:1rem;text-align:center;">Chưa Sẵn Sàng Đăng Ký Ngay?</p>
     <h2 class="serif reveal" style="font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700;color:#fff;margin-bottom:0.75rem;text-align:center;line-height:1.35;">
       Để Lại Thông Tin<br/><em style="color:var(--amber-l);">Nhận Nội Dung Giá Trị Miễn Phí</em>
     </h2>
@@ -1106,7 +1106,7 @@
           📩 ĐỂ LẠI THÔNG TIN · NHẬN TÀI LIỆU MIỄN PHÍ
         </button>
       </div>
-      <p style="text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:1.25rem;">🔒 Thông tin bảo mật hoàn toàn · Không spam · Hủy bất cứ lúc nào</p>
+      <p style="text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:1.25rem;">🔒 Thông tin bảo mật hoàn toàn · Không spam · Hủy bất cứ lúc nào</p>
     </form>
 
     <!--
@@ -1132,8 +1132,8 @@
 <!-- STICKY BAR -->
 <div class="sticky-bar">
   <div>
-    <p style="font-size:0.95rem;font-weight:700;color:var(--brown);margin-bottom:0.05rem;line-height:1.2;">Chỉ <span style="color:var(--rust);">490.000đ</span> <span style="font-size:0.72rem;font-weight:400;color:var(--text-3);">· trọn 90 ngày</span></p>
-    <p style="font-size:0.74rem;color:var(--text-3);line-height:1.2;">Chỉ còn <strong style="color:var(--rust);">14 suất</strong> · sắp đóng cửa</p>
+    <p style="font-size:0.95rem;font-weight:700;color:var(--brown);margin-bottom:0.05rem;line-height:1.2;">Chỉ <span style="color:var(--rust);">490.000đ</span> <span style="font-size:0.78rem;font-weight:400;color:var(--text-3);">· trọn 90 ngày</span></p>
+    <p style="font-size:0.8rem;color:var(--text-3);line-height:1.2;">Chỉ còn <strong style="color:var(--rust);">14 suất</strong> · sắp đóng cửa</p>
   </div>
   <a href="#register-form-wrap" class="cta-btn sticky-cta" style="font-size:0.88rem;padding:0.75rem 1.5rem;white-space:nowrap;">▶ Đăng Ký Ngay</a>
 </div>
