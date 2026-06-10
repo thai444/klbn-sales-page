@@ -7,6 +7,7 @@
   <title>Kỷ Luật Bản Năng · Chương Trình 90 Ngày</title>
   <!-- Tracking (Meta Pixel + GA4 + Clarity) — stub ngay, tải thư viện sau khi trang hiện -->
   <script>
+  document.documentElement.className += ' js'; // bật hiệu ứng reveal; nếu JS lỗi, nội dung vẫn hiện (xem CSS .reveal)
   // Stub: mọi lệnh tracking gọi sớm sẽ được xếp hàng, xử lý khi thư viện tải xong
   !function(f,n){f.fbq=function(){f.fbq.callMethod?f.fbq.callMethod.apply(f.fbq,arguments):f.fbq.queue.push(arguments)};
     if(!f._fbq)f._fbq=f.fbq;f.fbq.push=f.fbq;f.fbq.loaded=!0;f.fbq.version='2.0';f.fbq.queue=[];}(window);
@@ -20,26 +21,20 @@
 
   window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)};
 
-  // Hoãn tải các thư viện theo dõi đến khi người dùng tương tác hoặc tối đa 2.5s
+  // Tải thư viện theo dõi NGAY (để Clarity ghi đủ phiên, Pixel bắn sớm, dữ liệu chính xác)
   (function(){
-    var loaded=false;
     function add(src){var s=document.createElement('script');s.async=true;s.src=src;document.head.appendChild(s);}
-    function load(){
-      if(loaded)return;loaded=true;
-      add('https://connect.facebook.net/en_US/fbevents.js');
-      add('https://www.googletagmanager.com/gtag/js?id=G-QRH8TT4CW0');
-      add('https://www.clarity.ms/tag/wvhzyrvwqw');
-    }
-    ['scroll','pointerdown','keydown','touchstart','mousemove'].forEach(function(e){
-      window.addEventListener(e,load,{once:true,passive:true});
-    });
-    setTimeout(load,2500);
+    add('https://connect.facebook.net/en_US/fbevents.js');
+    add('https://www.googletagmanager.com/gtag/js?id=G-QRH8TT4CW0');
+    add('https://www.clarity.ms/tag/wvhzyrvwqw');
   })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=4132104507101712&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Tracking -->
+  <script>/* Lưới an toàn: nếu hiệu ứng reveal không chạy (JS lỗi/observer fail), vẫn hiện nội dung sau 4s, không để trang trống */
+  setTimeout(function(){try{document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){el.classList.add('visible');});}catch(e){}},4000);</script>
 
   <link rel="preload" as="image" href="photo-after1.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,8 +92,9 @@
     .spots-fill { height:100%; background:linear-gradient(90deg,var(--amber),var(--amber-l)); border-radius:99px; animation:fillBar 1.5s ease forwards; }
     @keyframes fillBar { from{width:0} to{width:72%} }
     @keyframes tiktokBlink { 0%,100%{opacity:1;text-shadow:0 0 8px #29d9ff,0 0 18px #29d9ff;} 50%{opacity:0.6;text-shadow:none;} }
-    .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease,transform 0.65s ease; }
-    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal { opacity:1; transform:none; transition:opacity 0.65s ease,transform 0.65s ease; }
+    .js .reveal { opacity:0; transform:translateY(20px); }
+    .js .reveal.visible { opacity:1; transform:translateY(0); }
     #register-form-wrap, #payment, #qr-section, #bump-section, #info-summary { scroll-margin-top: 52px; }
     /* Canh trái tự nhiên cho mọi đoạn văn — canh đều 2 bên gây giãn chữ thưa, xấu trên điện thoại */
     [style*="text-align:justify"] { text-align: left !important; word-spacing: normal !important; }
@@ -1144,8 +1140,12 @@
   function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
 
   /* ── Scroll reveal ── */
-  const obs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); }, {threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  try {
+    const obs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); }, {threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  } catch(err) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
 
   /* ── Cuộn neo "bám đích": tự cuộn lại tới khi vị trí ổn định, bù việc ảnh lazy tải dần làm xê dịch (kể cả cú cuộn dài) ── */
   document.querySelectorAll('a[href^="#"]').forEach(function(link){
