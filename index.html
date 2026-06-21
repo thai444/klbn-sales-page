@@ -62,7 +62,7 @@
     body { background: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.8; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
     p { font-family: 'Inter', sans-serif; }
     h1, h2, h3, h4 { text-wrap: balance; }
-    @media(max-width:640px){ html{ font-size: 16px; } }
+    @media(max-width:640px){ html{ font-size: 17.5px; } }
     .serif { font-family: 'Lora', Georgia, serif; }
     .amber { color: var(--amber); }
     .rust  { color: var(--rust); }
@@ -81,8 +81,8 @@
     .value-row { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; padding:1rem 1.25rem; border-bottom:1px solid var(--cream-3); }
     .value-row:last-child { border-bottom:none; }
     .faq-item { border-bottom:1px solid var(--border); padding:1.1rem 0; }
-    .faq-question { font-weight:600; color:var(--brown-2); cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-size:0.95rem; }
-    .faq-answer { margin-top:0.6rem; color:var(--text-2); font-size:0.9rem; display:none; line-height:1.8; }
+    .faq-question { font-weight:600; color:var(--brown-2); cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-size:1.02rem; }
+    .faq-answer { margin-top:0.6rem; color:var(--text-2); font-size:0.96rem; display:none; line-height:1.8; }
     .faq-item.open .faq-answer { display:block; }
     .faq-icon { transition:transform 0.3s ease; font-size:1.2rem; color:var(--amber); flex-shrink:0; margin-left:0.75rem; }
     .faq-item.open .faq-icon { transform:rotate(45deg); }
@@ -104,12 +104,12 @@
     p, li { text-wrap: pretty; }                       /* tránh chữ mồ côi 1 từ ở dòng cuối */
     /* Hiệu ứng "tráng gương" — vệt sáng quét ngang làm nổi bật nút hành động */
     .cta-btn, #reg-btn { position: relative; overflow: hidden; }
-    .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:-55%; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.62) 50%, transparent 100%); transform:translateX(-80%) skewX(-22deg); pointer-events:none; animation: ctaShine 2.5s ease-in-out infinite; will-change:transform; }
-    @keyframes ctaShine { 0% { transform:translateX(-80%) skewX(-22deg); } 55% { transform:translateX(210%) skewX(-22deg); } 100% { transform:translateX(210%) skewX(-22deg); } }
+    .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:0; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.62) 50%, transparent 100%); transform:translateX(-145%) skewX(-22deg); pointer-events:none; animation: ctaShine 2.5s ease-in-out infinite; will-change:transform; }
+    @keyframes ctaShine { 0% { transform:translateX(-145%) skewX(-22deg); } 55% { transform:translateX(255%) skewX(-22deg); } 100% { transform:translateX(255%) skewX(-22deg); } }
     @media (prefers-reduced-motion: reduce) { .cta-btn::after, #reg-btn::after { animation: none; } }
     .guarantee-box { position:relative; overflow:hidden; }
-    .guarantee-box::after { content:""; position:absolute; top:0; left:-60%; width:60%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%); transform:translateX(-90%) skewX(-22deg); pointer-events:none; animation: guaranteeShine 3.4s ease-in-out infinite; z-index:2; will-change:transform; }
-    @keyframes guaranteeShine { 0% { transform:translateX(-90%) skewX(-22deg); } 55% { transform:translateX(230%) skewX(-22deg); } 100% { transform:translateX(230%) skewX(-22deg); } }
+    .guarantee-box::after { content:""; position:absolute; top:0; left:0; width:60%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%); transform:translateX(-150%) skewX(-22deg); pointer-events:none; animation: guaranteeShine 3.4s ease-in-out infinite; z-index:2; will-change:transform; }
+    @keyframes guaranteeShine { 0% { transform:translateX(-150%) skewX(-22deg); } 55% { transform:translateX(235%) skewX(-22deg); } 100% { transform:translateX(235%) skewX(-22deg); } }
     .guarantee-badge { display:inline-flex; align-items:baseline; gap:0.35rem; background:linear-gradient(135deg,#1F7A4D,#2EA86A); color:#fff; padding:0.5rem 1.4rem; border-radius:99px; box-shadow:0 8px 22px rgba(31,122,77,0.35); }
     @media (prefers-reduced-motion: reduce) { .guarantee-box::after { animation: none; } }
     .texture-bg { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47B2A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
@@ -127,13 +127,13 @@
 <!-- == SECTION 1 · HERO == -->
 <section class="texture-bg hero" style="padding:1.1rem 1.5rem 2.5rem;text-align:center;background-color:var(--cream);border-bottom:1px solid var(--border);">
   <div style="max-width:760px;margin:0 auto;">
-    <h1 class="serif" style="font-size:clamp(1.7rem,4.6vw,2.6rem);font-weight:800;line-height:1.25;color:var(--brown);margin-bottom:1rem;">
+    <h1 class="serif" style="font-size:clamp(1.95rem,5.4vw,3rem);font-weight:800;line-height:1.22;color:var(--brown);margin-bottom:1.1rem;">
       Mình Từng Nghĩ Lần Thất Bại Đó Đã Chôn Mình Xuống <span style="color:var(--rust);">Đáy</span>
     </h1>
-    <p class="serif" style="font-size:clamp(1.1rem,3vw,1.45rem);color:var(--brown-2);max-width:620px;margin:0 auto 1.1rem;line-height:1.4;font-weight:700;">
+    <p class="serif" style="font-size:clamp(1.25rem,3.6vw,1.65rem);color:var(--brown-2);max-width:640px;margin:0 auto 1.2rem;line-height:1.42;font-weight:700;">
       Cho tới khi mình hiểu ra: Chính cái đáy đó là <span style="color:var(--rust);">quặng vàng</span> mình đang ngồi lên mà không biết.
     </p>
-    <p style="font-size:clamp(0.95rem,2.5vw,1.08rem);color:var(--text-2);max-width:600px;margin:0 auto;line-height:1.7;">
+    <p style="font-size:clamp(1.05rem,2.8vw,1.18rem);color:var(--text-2);max-width:620px;margin:0 auto;line-height:1.75;">
       Một lần vấp ngã có thể lấy đi tiền của bạn, niềm tin của bạn, cả con người bạn từng là. Hoặc nó trở thành thứ giá trị nhất đời bạn. Khác biệt không nằm ở chuyện bạn ngã nặng đến đâu. Nó nằm ở thứ bạn làm trong <strong style="color:var(--rust);">90 ngày tiếp theo</strong>.
     </p>
     <!-- Before / After Media Strip -->
@@ -305,15 +305,15 @@
     <p class="reveal" style="text-align:center;color:var(--text-3);font-size:0.95rem;margin-bottom:1.75rem;line-height:1.7;max-width:560px;margin-left:auto;margin-right:auto;">Họ không phải người ngã nhẹ nhất, may mắn nhất, hay gồng ý chí nhiều nhất. Họ chỉ hiểu ba điều này.</p>
     <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
-        <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">1 · Thất bại là quặng, không phải rác</p>
+        <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">1 · Thất bại là quặng, không phải rác</p>
         <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Người thua bỏ nó đi. Người luyện lại giữ nó, vì trong đó là bài học, là động lực, là chất liệu để xây con người mới.</p>
       </div>
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
-        <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">2 · Kỷ luật là lò luyện, không phải hình phạt</p>
+        <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">2 · Kỷ luật là lò luyện, không phải hình phạt</p>
         <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Hầu hết đàn ông nghĩ kỷ luật là gồng, là ép, là khổ. Kỷ luật đúng cách là hệ thống giúp việc tốt trở thành bản năng, không cần gồng.</p>
       </div>
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
-        <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">3 · Vàng là con người, không phải con số</p>
+        <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">3 · Vàng là con người, không phải con số</p>
         <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Khi con người bên trong được luyện lại, tiền và cơ hội là hệ quả tự nhiên. Chạy theo con số trước mà con người chưa đổi, mọi thứ kiếm được rồi cũng tuột mất, đúng như lần ngã trước.</p>
       </div>
     </div>
@@ -515,7 +515,7 @@
         <div style="display:flex;align-items:flex-start;gap:1.25rem;">
           <div style="background:var(--cream-3);border-radius:6px;padding:0.5rem 0.85rem;font-weight:800;color:var(--amber);font-size:1rem;flex-shrink:0;font-family:'Lora',serif;">01</div>
           <div>
-            <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">Nền Tảng Sinh Học</p>
+            <p style="font-weight:700;color:var(--brown);font-size:1.05rem;margin-bottom:0.4rem;">Nền Tảng Sinh Học</p>
             <p style="color:var(--text-2);font-size:0.9rem;margin-bottom:0.6rem;line-height:1.7;">Không thể xây kỷ luật trên một cơ thể kiệt sức. Trước khi thay đổi tư duy, bạn cần điều chỉnh lại nhịp sinh học: Giấc ngủ, bữa ăn, vận động. Đây là 21 ngày đầu tiên. Không phải để trở thành vận động viên, mà để cơ thể bạn ngừng là kẻ thù của bạn.</p>
             <p style="font-size:0.8rem;color:var(--rust);font-style:italic;">Thiếu trụ cột này: Mọi quyết tâm tinh thần sẽ sụp đổ sau 3 đến 5 ngày vì cơ thể không đủ năng lượng để duy trì.</p>
             <p style="font-size:0.85rem;color:var(--text-3);margin-top:0.6rem;padding-top:0.55rem;border-top:1px dashed var(--cream-3);"><strong style="color:var(--brown);">📖 Cơ sở khoa học:</strong> GS. Matthew Walker (UC Berkeley) trong <em>Why We Sleep</em> chỉ ra giấc ngủ là nền tảng phục hồi não bộ, trí nhớ và khả năng tự kiểm soát. Thiếu ngủ làm suy yếu vùng vỏ não trước trán, nơi điều khiển ý chí.</p>
@@ -526,7 +526,7 @@
         <div style="display:flex;align-items:flex-start;gap:1.25rem;">
           <div style="background:var(--cream-3);border-radius:6px;padding:0.5rem 0.85rem;font-weight:800;color:var(--amber);font-size:1rem;flex-shrink:0;font-family:'Lora',serif;">02</div>
           <div>
-            <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">Tẩy Độc Tinh Thần</p>
+            <p style="font-weight:700;color:var(--brown);font-size:1.05rem;margin-bottom:0.4rem;">Tẩy Độc Tinh Thần</p>
             <p style="color:var(--text-2);font-size:0.9rem;margin-bottom:0.6rem;line-height:1.7;">Có những thứ bạn tiêu thụ mỗi ngày đang âm thầm phá hoại bạn: Nội dung mạng xã hội, cuộc trò chuyện tiêu cực, thói quen so sánh. Trụ cột này không phải về "detox" theo nghĩa xu hướng, mà là nhận ra và cắt đứt những dây kéo bạn xuống.</p>
             <p style="font-size:0.8rem;color:var(--rust);font-style:italic;">Thiếu trụ cột này: Bạn có thể tập thể dục và ngủ đúng giờ, nhưng đầu óc vẫn ồn ào và không tìm được sự rõ ràng.</p>
             <p style="font-size:0.85rem;color:var(--text-3);margin-top:0.6rem;padding-top:0.55rem;border-top:1px dashed var(--cream-3);"><strong style="color:var(--brown);">📖 Cơ sở khoa học:</strong> BS. Anna Lembke (Đại học Stanford) trong <em>Dopamine Nation</em> giải thích việc liên tục nạp kích thích dễ dãi (mạng xã hội, nội dung ngắn) làm rối loạn cân bằng dopamine, khiến bạn khó tập trung và khó thấy hài lòng với những việc có ý nghĩa.</p>
@@ -537,7 +537,7 @@
         <div style="display:flex;align-items:flex-start;gap:1.25rem;">
           <div style="background:var(--cream-3);border-radius:6px;padding:0.5rem 0.85rem;font-weight:800;color:var(--amber);font-size:1rem;flex-shrink:0;font-family:'Lora',serif;">03</div>
           <div>
-            <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">Bản Sắc Mới</p>
+            <p style="font-weight:700;color:var(--brown);font-size:1.05rem;margin-bottom:0.4rem;">Bản Sắc Mới</p>
             <p style="color:var(--text-2);font-size:0.9rem;margin-bottom:0.6rem;line-height:1.7;">Kỷ luật không bền vì bạn cố gắng thay đổi hành vi. Nó bền khi bạn thay đổi cách bạn định nghĩa bản thân. "Mình đang cố tập thể dục" khác với "Mình là người tập thể dục." Trụ cột này xây dựng lại cái tôi bên trong, để hành động tốt trở thành bản năng, không phải nỗ lực.</p>
             <p style="font-size:0.8rem;color:var(--rust);font-style:italic;">Thiếu trụ cột này: Bạn sẽ mãi phụ thuộc vào động lực từ bên ngoài, một ngày không có cảm hứng là mọi thứ sụp đổ.</p>
             <p style="font-size:0.85rem;color:var(--text-3);margin-top:0.6rem;padding-top:0.55rem;border-top:1px dashed var(--cream-3);"><strong style="color:var(--brown);">📖 Cơ sở khoa học:</strong> James Clear trong <em>Atomic Habits</em> chứng minh thói quen chỉ bền khi gắn với bản sắc. Thay vì ép buộc hành vi, bạn thay đổi câu trả lời cho câu hỏi "Mình là ai", và hành động đúng sẽ trở thành tự nhiên.</p>
@@ -548,7 +548,7 @@
         <div style="display:flex;align-items:flex-start;gap:1.25rem;">
           <div style="background:var(--cream-3);border-radius:6px;padding:0.5rem 0.85rem;font-weight:800;color:var(--amber);font-size:1rem;flex-shrink:0;font-family:'Lora',serif;">04</div>
           <div>
-            <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">Hệ Thống Ngày</p>
+            <p style="font-weight:700;color:var(--brown);font-size:1.05rem;margin-bottom:0.4rem;">Hệ Thống Ngày</p>
             <p style="color:var(--text-2);font-size:0.9rem;margin-bottom:0.6rem;line-height:1.7;">Một ngày có cấu trúc không phải là một ngày bị kiểm soát, đó là một ngày bạn thực sự làm chủ. Chúng ta thiết kế lịch trình cá nhân hóa: Biết khi nào cần tập trung, khi nào cần nghỉ ngơi, khi nào cần kết nối với mục tiêu lớn hơn.</p>
             <p style="font-size:0.8rem;color:var(--rust);font-style:italic;">Thiếu trụ cột này: Bạn sẽ luôn bận rộn nhưng không tiến về đâu, làm nhiều mà không làm đúng.</p>
             <p style="font-size:0.85rem;color:var(--text-3);margin-top:0.6rem;padding-top:0.55rem;border-top:1px dashed var(--cream-3);"><strong style="color:var(--brown);">📖 Cơ sở khoa học:</strong> GS. Cal Newport (Đại học Georgetown) trong <em>Deep Work</em> cho thấy một lịch trình được thiết kế chủ động cho phép tập trung sâu, đó là nơi tạo ra giá trị thật, thay vì cả ngày bận rộn với việc vụn vặt.</p>
@@ -559,7 +559,7 @@
         <div style="display:flex;align-items:flex-start;gap:1.25rem;">
           <div style="background:var(--cream-3);border-radius:6px;padding:0.5rem 0.85rem;font-weight:800;color:var(--amber);font-size:1rem;flex-shrink:0;font-family:'Lora',serif;">05</div>
           <div>
-            <p style="font-weight:700;color:var(--brown);margin-bottom:0.4rem;">Khả Năng Phục Hồi</p>
+            <p style="font-weight:700;color:var(--brown);font-size:1.05rem;margin-bottom:0.4rem;">Khả Năng Phục Hồi</p>
             <p style="color:var(--text-2);font-size:0.9rem;margin-bottom:0.6rem;line-height:1.7;">Ngày nào đó bạn sẽ gãy. Đây không phải bi quan, đây là thực tế. Trụ cột thứ 5 không dạy bạn đừng gãy, nó dạy bạn gãy nhanh và đứng dậy nhanh hơn. Phục hồi sau thất bại là kỹ năng, và nó có thể học được.</p>
             <p style="font-size:0.8rem;color:var(--rust);font-style:italic;">Thiếu trụ cột này: Một ngày xấu trở thành một tuần tệ, rồi một tháng mất kiểm soát, vòng lặp cũ lại bắt đầu.</p>
             <p style="font-size:0.85rem;color:var(--text-3);margin-top:0.6rem;padding-top:0.55rem;border-top:1px dashed var(--cream-3);"><strong style="color:var(--brown);">📖 Cơ sở khoa học:</strong> GS. Angela Duckworth (Đại học Pennsylvania), qua nghiên cứu về <em>Grit</em>, kết luận yếu tố dự báo thành công bền vững không phải tài năng mà là sự kiên trì và khả năng đứng dậy sau thất bại, một kỹ năng có thể rèn luyện.</p>
@@ -716,23 +716,23 @@
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">🎬</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">4 Video Dẫn Đường</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">1 video mở đầu mỗi giai đoạn · Thái chia sẻ thẳng về những gì đang xảy ra trong đầu và cơ thể bạn · Không có lý thuyết suông.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.98rem;margin-bottom:0.2rem;">4 Video Dẫn Đường</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">1 video mở đầu mỗi giai đoạn · Thái chia sẻ thẳng về những gì đang xảy ra trong đầu và cơ thể bạn · Không có lý thuyết suông.</p></div>
         </div>
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">📒</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">4 Workbook Hành Động</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">1 workbook cho mỗi giai đoạn · Nhiệm vụ cụ thể · Điền tay · Không phải bài thi · Không áp lực.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.98rem;margin-bottom:0.2rem;">4 Workbook Hành Động</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">1 workbook cho mỗi giai đoạn · Nhiệm vụ cụ thể · Điền tay · Không phải bài thi · Không áp lực.</p></div>
         </div>
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">📓</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">Sổ Tay 90 Ngày · PDF có thể in</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Checklist hàng ngày · Câu hỏi phản tư · Nhật ký hành trình · Tổng kết ngày 90 · Cầm tay và dùng thật.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.98rem;margin-bottom:0.2rem;">Sổ Tay 90 Ngày · PDF có thể in</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Checklist hàng ngày · Câu hỏi phản tư · Nhật ký hành trình · Tổng kết ngày 90 · Cầm tay và dùng thật.</p></div>
         </div>
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">🎙️</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">2 buổi Live Q&A 45 phút (Zoom)</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Hỏi trực tiếp · Nhận phản hồi nhóm · Điều chỉnh lộ trình cùng nhau · Buổi 1 cuối tuần 3 · Buổi 2 cuối tuần 7.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.98rem;margin-bottom:0.2rem;">2 buổi Live Q&A 45 phút (Zoom)</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Hỏi trực tiếp · Nhận phản hồi nhóm · Điều chỉnh lộ trình cùng nhau · Buổi 1 cuối tuần 3 · Buổi 2 cuối tuần 7.</p></div>
         </div>
         <div style="display:flex;gap:1rem;align-items:flex-start;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--rust));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;">💬</div>
-          <div><p style="font-weight:700;color:var(--brown);font-size:0.9rem;margin-bottom:0.2rem;">Cộng đồng Telegram kín, truy cập vĩnh viễn</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Kết nối với những người cùng hành trình · Không một mình trong 90 ngày · Và cả sau đó.</p></div>
+          <div><p style="font-weight:700;color:var(--brown);font-size:0.98rem;margin-bottom:0.2rem;">Cộng đồng Telegram kín, truy cập vĩnh viễn</p><p style="color:var(--text-3);font-size:0.83rem;line-height:1.6;">Kết nối với những người cùng hành trình · Không một mình trong 90 ngày · Và cả sau đó.</p></div>
         </div>
       </div>
     </div>
@@ -815,10 +815,10 @@
     </h2>
 
     <div class="card reveal" style="overflow:hidden;margin-bottom:2rem;">
-      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:0.92rem;">4 Video Dẫn Đường + 4 Workbook Hành Động</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">1 video + 1 workbook mở đầu mỗi giai đoạn · Nhiệm vụ cụ thể · Điền tay · Không lý thuyết suông</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">3.500.000đ</p></div>
-      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:0.92rem;">2 buổi Live Q&A 45 phút (Zoom)</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Hỏi trực tiếp · Nhận phản hồi nhóm · Điều chỉnh lộ trình cùng nhau</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">800.000đ</p></div>
-      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:0.92rem;">Cộng đồng Telegram kín, truy cập vĩnh viễn</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Kết nối với người cùng hành trình · Không một mình trong 90 ngày · Và cả sau đó</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">500.000đ</p></div>
-      <div class="value-row" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);"><div><p style="font-weight:600;color:var(--amber);font-size:0.92rem;">BONUS · Sổ Tay 90 Ngày · PDF có thể in</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Checklist hàng ngày · Câu hỏi phản tư · Nhật ký hành trình · Tổng kết ngày 90</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">590.000đ</p></div>
+      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:1rem;">4 Video Dẫn Đường + 4 Workbook Hành Động</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">1 video + 1 workbook mở đầu mỗi giai đoạn · Nhiệm vụ cụ thể · Điền tay · Không lý thuyết suông</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">3.500.000đ</p></div>
+      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:1rem;">2 buổi Live Q&A 45 phút (Zoom)</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Hỏi trực tiếp · Nhận phản hồi nhóm · Điều chỉnh lộ trình cùng nhau</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">800.000đ</p></div>
+      <div class="value-row"><div><p style="font-weight:600;color:var(--brown);font-size:1rem;">Cộng đồng Telegram kín, truy cập vĩnh viễn</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Kết nối với người cùng hành trình · Không một mình trong 90 ngày · Và cả sau đó</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">500.000đ</p></div>
+      <div class="value-row" style="background:linear-gradient(135deg,#FFF8EE,#FFF0D8);"><div><p style="font-weight:600;color:var(--amber);font-size:1rem;">BONUS · Sổ Tay 90 Ngày · PDF có thể in</p><p style="font-size:0.85rem;color:var(--text-3);margin-top:0.15rem;">Checklist hàng ngày · Câu hỏi phản tư · Nhật ký hành trình · Tổng kết ngày 90</p></div><p style="color:var(--text-3);font-size:0.88rem;text-decoration:line-through;flex-shrink:0;">590.000đ</p></div>
       <div style="padding:1rem 1.25rem;display:flex;justify-content:space-between;background:var(--cream-3);"><p style="font-weight:700;color:var(--brown);">TỔNG GIÁ TRỊ</p><p style="font-weight:700;color:var(--text-3);text-decoration:line-through;">5.390.000đ</p></div>
       <div class="price-block-inner" style="padding:2rem;text-align:center;background:linear-gradient(135deg,#FFF8EE,#FFF3DC);">
         <!-- 50 người banner -->
@@ -846,7 +846,7 @@
         <span style="font-size:1.05rem;font-weight:800;letter-spacing:0.02em;">HOÀN TIỀN</span>
       </div>
       <p class="serif" style="font-size:1.5rem;font-weight:700;color:var(--brown);line-height:1.4;max-width:540px;margin:0 auto 1rem;">Không hiệu quả, mình trả lại toàn bộ tiền cho bạn. Không hỏi thêm một câu.</p>
-      <p style="color:var(--text-2);line-height:1.9;font-size:0.92rem;max-width:520px;margin:0 auto 0.85rem;">Trong 30 ngày đầu, nếu bạn đã làm đủ Workbook tuần 1 đến 3, tham gia buổi Live Q&A đầu tiên mà vẫn thấy chương trình không phù hợp, mình hoàn lại <strong style="color:#1F7A4D;">100% số tiền</strong>.</p>
+      <p style="color:var(--text-2);line-height:1.9;font-size:1rem;max-width:520px;margin:0 auto 0.85rem;">Trong 30 ngày đầu, nếu bạn đã làm đủ Workbook tuần 1 đến 3, tham gia buổi Live Q&A đầu tiên mà vẫn thấy chương trình không phù hợp, mình hoàn lại <strong style="color:#1F7A4D;">100% số tiền</strong>.</p>
       <p style="font-size:0.8rem;color:var(--text-3);font-style:italic;max-width:520px;margin:0 auto;">Điều kiện này tồn tại vì mình muốn người thực sự cam kết, không phải người đang tìm cách "thử cho biết." Nếu bạn làm đủ những thứ trên mà vẫn thấy không có gì thay đổi, thì mình không xứng đáng giữ tiền của bạn.</p>
     </div>
 
