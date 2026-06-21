@@ -102,6 +102,14 @@
     body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
     h1, h2, h3, .serif { text-wrap: balance; }       /* tiêu đề ngắt dòng cân đối, không lệch */
     p, li { text-wrap: pretty; }                       /* tránh chữ mồ côi 1 từ ở dòng cuối */
+    /* Câu chuyện: bỏ khung hộp để chữ chảy thoáng tự nhiên (pill nhãn vẫn phân đoạn) */
+    #origin-story .card { background:transparent !important; border:none !important; box-shadow:none !important; padding:0 !important; margin-bottom:2rem !important; }
+    /* Justify CHỈ áp dụng cho đoạn văn dài (tránh dòng ngắn bị giãn chữ xấu — loại trừ tiêu đề/nhãn/giá/trích dẫn) */
+    #origin-story .card p:not(.serif),
+    .pillar-card p:not([style*="font-weight:700"]),
+    .testimonial-card > p:not(.serif):not([style*="font-weight"]),
+    .faq-answer,
+    .jtxt { text-align: justify; text-justify: inter-word; }
     /* Hiệu ứng "tráng gương" — vệt sáng quét ngang làm nổi bật nút hành động */
     .cta-btn, #reg-btn { position: relative; overflow: hidden; }
     .cta-btn::after, #reg-btn::after { content:""; position:absolute; top:0; left:0; width:55%; height:100%; background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.62) 50%, transparent 100%); transform:translateX(-145%) skewX(-22deg); pointer-events:none; animation: ctaShine 2.5s ease-in-out infinite; will-change:transform; }
@@ -179,8 +187,8 @@
   <div style="max-width:680px;margin:0 auto;">
     <h2 class="serif reveal" style="color:#FAF6F0;font-size:clamp(1.35rem,3.6vw,1.95rem);font-weight:700;line-height:1.45;text-align:center;margin-bottom:1.5rem;">Nếu bạn đang đọc cái này, có thể một phần trong bạn đã <span style="color:var(--amber-l);">thì thầm điều này từ lâu</span></h2>
     <div class="reveal" style="color:#C9B8A0;font-size:1rem;line-height:1.95;">
-      <p style="margin-bottom:0.85rem;">Bạn đã từng vấp một cú đau. Mất tiền. Mất việc. Mất một mối quan hệ. Hoặc mất chính cái phiên bản tự tin của mình ngày trước. Và từ sau cú đó, mọi thứ cứ trượt dần.</p>
-      <p style="margin-bottom:0.85rem;">Bạn ngủ muộn hơn. Dậy trễ hơn. Hứa với bản thân rồi lại nuốt lời. Bạn nhìn người khác tiến lên, còn mình thì đứng yên, có khi đang lùi. Bạn tự nhủ "để mai", và cái "mai" đó đã lặp lại hơn một trăm lần.</p>
+      <p class="jtxt" style="margin-bottom:0.85rem;">Bạn đã từng vấp một cú đau. Mất tiền. Mất việc. Mất một mối quan hệ. Hoặc mất chính cái phiên bản tự tin của mình ngày trước. Và từ sau cú đó, mọi thứ cứ trượt dần.</p>
+      <p class="jtxt" style="margin-bottom:0.85rem;">Bạn ngủ muộn hơn. Dậy trễ hơn. Hứa với bản thân rồi lại nuốt lời. Bạn nhìn người khác tiến lên, còn mình thì đứng yên, có khi đang lùi. Bạn tự nhủ "để mai", và cái "mai" đó đã lặp lại hơn một trăm lần.</p>
     </div>
     <div class="reveal" style="background:rgba(196,123,42,0.18);border:1px solid rgba(196,123,42,0.45);border-radius:12px;padding:1.6rem 1.75rem;margin:1.5rem 0;text-align:center;box-shadow:0 8px 30px rgba(196,123,42,0.12);">
       <p style="color:#9B8A75;font-size:0.85rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">Điều không ai nói thẳng với bạn</p>
@@ -306,15 +314,15 @@
     <div class="reveal" style="display:flex;flex-direction:column;gap:1rem;">
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
         <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">1 · Thất bại là quặng, không phải rác</p>
-        <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Người thua bỏ nó đi. Người luyện lại giữ nó, vì trong đó là bài học, là động lực, là chất liệu để xây con người mới.</p>
+        <p class="jtxt" style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Người thua bỏ nó đi. Người luyện lại giữ nó, vì trong đó là bài học, là động lực, là chất liệu để xây con người mới.</p>
       </div>
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
         <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">2 · Kỷ luật là lò luyện, không phải hình phạt</p>
-        <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Hầu hết đàn ông nghĩ kỷ luật là gồng, là ép, là khổ. Kỷ luật đúng cách là hệ thống giúp việc tốt trở thành bản năng, không cần gồng.</p>
+        <p class="jtxt" style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Hầu hết đàn ông nghĩ kỷ luật là gồng, là ép, là khổ. Kỷ luật đúng cách là hệ thống giúp việc tốt trở thành bản năng, không cần gồng.</p>
       </div>
       <div style="background:#fff;border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:10px;padding:1.5rem;">
         <p style="font-weight:700;color:var(--brown);font-size:1.08rem;margin-bottom:0.4rem;">3 · Vàng là con người, không phải con số</p>
-        <p style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Khi con người bên trong được luyện lại, tiền và cơ hội là hệ quả tự nhiên. Chạy theo con số trước mà con người chưa đổi, mọi thứ kiếm được rồi cũng tuột mất, đúng như lần ngã trước.</p>
+        <p class="jtxt" style="color:var(--text-2);font-size:0.92rem;line-height:1.75;">Khi con người bên trong được luyện lại, tiền và cơ hội là hệ quả tự nhiên. Chạy theo con số trước mà con người chưa đổi, mọi thứ kiếm được rồi cũng tuột mất, đúng như lần ngã trước.</p>
       </div>
     </div>
 
@@ -464,7 +472,7 @@
     </h2>
 
     <div class="card reveal" style="padding:2rem;margin-bottom:1.75rem;">
-      <p style="color:var(--text-2);line-height:2.1;font-size:1.02rem;">Bạn mở mắt ra. Không phải vì đồng hồ báo thức hét vào mặt. Không phải vì lo lắng về một cuộc họp. Bạn mở mắt vì cơ thể bạn đã sẵn sàng, đã ngủ đủ, đã nghỉ ngơi đúng nghĩa.<br/><br/>Bạn nhìn ra cửa sổ. Mặt trời vừa lên, và thay vì cảm giác nặng nề quen thuộc mỗi sáng, cái cảm giác <em>"lại một ngày nữa trôi qua"</em>, bạn cảm thấy một thứ gì đó lạ lẫm nhưng thực sự: <strong style="color:var(--rust);">Sự mong chờ.</strong><br/><br/>Bạn không cần phải cưỡng ép bản thân ra khỏi giường. Bạn đã có lý do để đứng dậy.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:2.1;font-size:1.02rem;">Bạn mở mắt ra. Không phải vì đồng hồ báo thức hét vào mặt. Không phải vì lo lắng về một cuộc họp. Bạn mở mắt vì cơ thể bạn đã sẵn sàng, đã ngủ đủ, đã nghỉ ngơi đúng nghĩa.<br/><br/>Bạn nhìn ra cửa sổ. Mặt trời vừa lên, và thay vì cảm giác nặng nề quen thuộc mỗi sáng, cái cảm giác <em>"lại một ngày nữa trôi qua"</em>, bạn cảm thấy một thứ gì đó lạ lẫm nhưng thực sự: <strong style="color:var(--rust);">Sự mong chờ.</strong><br/><br/>Bạn không cần phải cưỡng ép bản thân ra khỏi giường. Bạn đã có lý do để đứng dậy.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="two-col reveal">
@@ -678,7 +686,7 @@
 
     <div class="reveal" style="max-width:640px;margin:0 auto 1.5rem;color:#C9B8A0;line-height:1.95;">
       <p class="serif" style="color:#FAF6F0;font-size:1.1rem;font-style:italic;border-left:2px solid var(--amber);padding-left:1rem;margin-bottom:1rem;">"Nhưng mình thất bại nhiều lần rồi. Mình sợ lần này cũng bỏ giữa chừng."</p>
-      <p style="margin-bottom:0.85rem;">Mình nghe câu này rất nhiều. Nhưng trước hết, hãy nhìn lại lý do bạn nghĩ mình "không có kỷ luật". Bạn so sánh mình với những người trông có vẻ kỷ luật trên mạng. Bạn nhìn lại những lần mình bỏ cuộc và kết luận: "Kiểu người như mình không hợp với cái này."</p>
+      <p class="jtxt" style="margin-bottom:0.85rem;">Mình nghe câu này rất nhiều. Nhưng trước hết, hãy nhìn lại lý do bạn nghĩ mình "không có kỷ luật". Bạn so sánh mình với những người trông có vẻ kỷ luật trên mạng. Bạn nhìn lại những lần mình bỏ cuộc và kết luận: "Kiểu người như mình không hợp với cái này."</p>
       <p style="color:#FAF6F0;font-weight:600;">Nhưng đây là điều bạn chưa thấy:</p>
     </div>
 
@@ -693,7 +701,7 @@
     </div>
 
     <div class="reveal" style="max-width:640px;margin:1.5rem auto 0;color:#C9B8A0;line-height:1.95;">
-      <p style="margin-bottom:0.85rem;">Con đường biến thất bại thành vàng có thật. Nhưng nó dài, và không dễ đi một mình. Mình đã mất nhiều tháng mò mẫm trong bóng tối, thử sai, tự trách, rồi lại đứng lên.</p>
+      <p class="jtxt" style="margin-bottom:0.85rem;">Con đường biến thất bại thành vàng có thật. Nhưng nó dài, và không dễ đi một mình. Mình đã mất nhiều tháng mò mẫm trong bóng tối, thử sai, tự trách, rồi lại đứng lên.</p>
       <p>Mình không muốn bạn phải mất từng đó thời gian. Vậy nên mình gom toàn bộ con đường đó lại thành một <strong style="color:#FAF6F0;">lộ trình 90 ngày rõ ràng</strong>, để bạn không phải trả cái giá mình đã trả mà vẫn tới được cùng một đích.</p>
     </div>
 
@@ -846,7 +854,7 @@
         <span style="font-size:1.05rem;font-weight:800;letter-spacing:0.02em;">HOÀN TIỀN</span>
       </div>
       <p class="serif" style="font-size:1.5rem;font-weight:700;color:var(--brown);line-height:1.4;max-width:540px;margin:0 auto 1rem;">Không hiệu quả, mình trả lại toàn bộ tiền cho bạn. Không hỏi thêm một câu.</p>
-      <p style="color:var(--text-2);line-height:1.9;font-size:1rem;max-width:520px;margin:0 auto 0.85rem;">Trong 30 ngày đầu, nếu bạn đã làm đủ Workbook tuần 1 đến 3, tham gia buổi Live Q&A đầu tiên mà vẫn thấy chương trình không phù hợp, mình hoàn lại <strong style="color:#1F7A4D;">100% số tiền</strong>.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:1.9;font-size:1rem;max-width:520px;margin:0 auto 0.85rem;">Trong 30 ngày đầu, nếu bạn đã làm đủ Workbook tuần 1 đến 3, tham gia buổi Live Q&A đầu tiên mà vẫn thấy chương trình không phù hợp, mình hoàn lại <strong style="color:#1F7A4D;">100% số tiền</strong>.</p>
       <p style="font-size:0.8rem;color:var(--text-3);font-style:italic;max-width:520px;margin:0 auto;">Điều kiện này tồn tại vì mình muốn người thực sự cam kết, không phải người đang tìm cách "thử cho biết." Nếu bạn làm đủ những thứ trên mà vẫn thấy không có gì thay đổi, thì mình không xứng đáng giữ tiền của bạn.</p>
     </div>
 
@@ -1034,7 +1042,7 @@
       <div style="background:#FFF5F5;border:1px solid #F4CCCC;border-radius:12px;padding:1.75rem;">
         <p style="font-weight:700;color:#C0392B;margin-bottom:1.25rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;">Lựa Chọn 1: Để Quặng Nằm Yên</p>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <p style="color:var(--text-3);font-size:0.87rem;line-height:1.65;border-left:2px solid #F4CCCC;padding-left:0.75rem;">Đóng trang này. Quay lại cuộc sống quen thuộc. Có thể tự nhủ "để tháng sau, khi ổn hơn." Nhưng bạn đã biết "tháng sau" đó trông như thế nào, vì bạn đã từng ở đó nhiều lần rồi.</p>
+          <p class="jtxt" style="color:var(--text-3);font-size:0.87rem;line-height:1.65;border-left:2px solid #F4CCCC;padding-left:0.75rem;">Đóng trang này. Quay lại cuộc sống quen thuộc. Có thể tự nhủ "để tháng sau, khi ổn hơn." Nhưng bạn đã biết "tháng sau" đó trông như thế nào, vì bạn đã từng ở đó nhiều lần rồi.</p>
           <p style="color:var(--text-3);font-size:0.85rem;line-height:1.6;">14 ngày nữa: Vẫn vòng lặp cũ</p>
           <p style="color:var(--text-3);font-size:0.85rem;line-height:1.6;">30 ngày nữa: Thêm một tháng trôi qua mà không có gì thay đổi</p>
           <p style="color:var(--text-3);font-size:0.85rem;line-height:1.6;">90 ngày nữa: Bạn sẽ nhìn lại và tự hỏi tại sao mình không bắt đầu từ hôm nay</p>
@@ -1043,7 +1051,7 @@
       <div style="background:linear-gradient(135deg,#FFF8EE,#FFF3DC);border:1px solid var(--amber);border-radius:12px;padding:1.75rem;">
         <p style="font-weight:700;color:var(--rust);margin-bottom:1.25rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;">Lựa Chọn 2: Đưa Quặng Vào Lò</p>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
-          <p style="color:var(--text-2);font-size:0.87rem;line-height:1.65;border-left:2px solid var(--amber);padding-left:0.75rem;">Đăng ký hôm nay. Ngay ngày mai, bạn nhận được nội dung tuần đầu tiên và bắt đầu với bài đánh giá 360°.</p>
+          <p class="jtxt" style="color:var(--text-2);font-size:0.87rem;line-height:1.65;border-left:2px solid var(--amber);padding-left:0.75rem;">Đăng ký hôm nay. Ngay ngày mai, bạn nhận được nội dung tuần đầu tiên và bắt đầu với bài đánh giá 360°.</p>
           <p style="color:var(--text-2);font-size:0.85rem;line-height:1.6;">14 ngày sau: Bạn đã thay đổi nhịp sinh học và cảm nhận được sự khác biệt về năng lượng</p>
           <p style="color:var(--text-2);font-size:0.85rem;line-height:1.6;">30 ngày sau: Bạn đã phá vỡ ít nhất một thói quen cũ và thay thế bằng thứ gì đó tốt hơn</p>
           <p style="color:var(--text-2);font-size:0.85rem;line-height:1.6;">90 ngày sau: Bạn nhìn lại và nhận ra, người đó và người bạn đang là, không phải cùng một người</p>
@@ -1075,8 +1083,8 @@
 
     <!-- P.S. -->
     <div class="reveal" style="max-width:640px;margin:1.75rem auto 0;border-left:3px solid var(--amber);padding-left:1.5rem;">
-      <p style="color:var(--text-2);line-height:1.9;font-size:0.95rem;margin-bottom:0.7rem;"><strong style="color:var(--brown);">P.S.</strong> Mình mất 3,6 tỷ và gần như mất luôn cả chính mình để học được điều này: Thất bại không định nghĩa bạn, cách bạn luyện nó mới định nghĩa bạn.</p>
-      <p style="color:var(--text-2);line-height:1.9;font-size:0.95rem;margin-bottom:0.7rem;">Số tiền mình mất, mình không lấy lại được. Nhưng con người được tôi luyện từ cú ngã đó, mình sẽ không đổi lấy bất cứ thứ gì.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:1.9;font-size:0.95rem;margin-bottom:0.7rem;"><strong style="color:var(--brown);">P.S.</strong> Mình mất 3,6 tỷ và gần như mất luôn cả chính mình để học được điều này: Thất bại không định nghĩa bạn, cách bạn luyện nó mới định nghĩa bạn.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:1.9;font-size:0.95rem;margin-bottom:0.7rem;">Số tiền mình mất, mình không lấy lại được. Nhưng con người được tôi luyện từ cú ngã đó, mình sẽ không đổi lấy bất cứ thứ gì.</p>
       <p style="color:var(--brown);line-height:1.9;font-size:0.95rem;font-weight:600;">Bạn không cần ngã 3,6 tỷ để bắt đầu. Bạn chỉ cần 490.000đ và 90 ngày.</p>
     </div>
   </div>
