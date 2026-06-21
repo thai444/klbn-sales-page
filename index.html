@@ -106,7 +106,7 @@
     #origin-story .card { background:transparent !important; border:none !important; box-shadow:none !important; padding:0 !important; margin-bottom:2rem !important; }
     /* Justify CHỈ áp dụng cho đoạn văn dài (tránh dòng ngắn bị giãn chữ xấu — loại trừ tiêu đề/nhãn/giá/trích dẫn) */
     #origin-story .card p:not(.serif),
-    .pillar-card p:not([style*="font-weight:700"]),
+    .pillar-card p:not([style*="font-weight:700"]):not([style*="italic"]),
     .testimonial-card > p:not(.serif):not([style*="font-weight"]),
     .faq-answer,
     .jtxt { text-align: justify; text-justify: inter-word; }
@@ -472,7 +472,9 @@
     </h2>
 
     <div class="card reveal" style="padding:2rem;margin-bottom:1.75rem;">
-      <p class="jtxt" style="color:var(--text-2);line-height:2.1;font-size:1.02rem;">Bạn mở mắt ra. Không phải vì đồng hồ báo thức hét vào mặt. Không phải vì lo lắng về một cuộc họp. Bạn mở mắt vì cơ thể bạn đã sẵn sàng, đã ngủ đủ, đã nghỉ ngơi đúng nghĩa.<br/><br/>Bạn nhìn ra cửa sổ. Mặt trời vừa lên, và thay vì cảm giác nặng nề quen thuộc mỗi sáng, cái cảm giác <em>"lại một ngày nữa trôi qua"</em>, bạn cảm thấy một thứ gì đó lạ lẫm nhưng thực sự: <strong style="color:var(--rust);">Sự mong chờ.</strong><br/><br/>Bạn không cần phải cưỡng ép bản thân ra khỏi giường. Bạn đã có lý do để đứng dậy.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:2.1;font-size:1.02rem;margin-bottom:1rem;">Bạn mở mắt ra. Không phải vì đồng hồ báo thức hét vào mặt. Không phải vì lo lắng về một cuộc họp. Bạn mở mắt vì cơ thể bạn đã sẵn sàng, đã ngủ đủ, đã nghỉ ngơi đúng nghĩa.</p>
+      <p class="jtxt" style="color:var(--text-2);line-height:2.1;font-size:1.02rem;margin-bottom:1rem;">Bạn nhìn ra cửa sổ. Mặt trời vừa lên, và thay vì cảm giác nặng nề quen thuộc mỗi sáng, cái cảm giác <em>"lại một ngày nữa trôi qua"</em>, bạn cảm thấy một thứ gì đó lạ lẫm nhưng thực sự: <strong style="color:var(--rust);">Sự mong chờ.</strong></p>
+      <p style="color:var(--text-2);line-height:2.1;font-size:1.02rem;">Bạn không cần phải cưỡng ép bản thân ra khỏi giường. Bạn đã có lý do để đứng dậy.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="two-col reveal">
@@ -1180,8 +1182,7 @@
 <!-- STICKY BAR -->
 <div class="sticky-bar">
   <div>
-    <p style="font-size:0.95rem;font-weight:700;color:var(--brown);margin-bottom:0.05rem;line-height:1.2;">Chỉ <span style="color:var(--rust);">490.000đ</span> <span style="font-size:0.85rem;font-weight:400;color:var(--text-3);">· trọn 90 ngày</span></p>
-    <p style="font-size:0.8rem;color:var(--text-3);line-height:1.2;">Chỉ còn <strong style="color:var(--rust);">14 suất</strong> · sắp đóng cửa</p>
+    <p style="font-size:0.92rem;font-weight:700;color:var(--brown);line-height:1.3;white-space:nowrap;">Chỉ <span style="color:var(--rust);">490.000đ</span> · Còn <span style="color:var(--rust);">14 suất</span></p>
   </div>
   <a href="#register-form-wrap" class="cta-btn sticky-cta" style="font-size:0.88rem;padding:0.75rem 1.5rem;white-space:nowrap;">▶ Đăng Ký Ngay</a>
 </div>
