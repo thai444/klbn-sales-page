@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="facebook-domain-verification" content="x6ueyhx9kw5iloinx2a8n9s6kjo7in" />
   <title>Kỷ Luật Bản Năng · Chương Trình 90 Ngày</title>
-  <!-- Tracking (Meta Pixel + GA4 + Clarity) — stub ngay, tải thư viện sau khi trang hiện -->
+  <!-- Tracking (Meta Pixel + GA4 + Clarity + TikTok Pixel) — stub ngay, tải thư viện sau khi trang hiện -->
   <script>
   document.documentElement.className += ' js'; // bật hiệu ứng reveal; nếu JS lỗi, nội dung vẫn hiện (xem CSS .reveal)
   // Stub: mọi lệnh tracking gọi sớm sẽ được xếp hàng, xử lý khi thư viện tải xong
@@ -20,6 +20,13 @@
   gtag('config','G-QRH8TT4CW0');
 
   window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments)};
+
+  // TikTok Pixel
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(n,s)};
+    ttq.load('D8VTP0BC77UBI6V93TJG');
+    ttq.page();
+  }(window, document, 'ttq');
 
   // Tải thư viện theo dõi NGAY (để Clarity ghi đủ phiên, Pixel bắn sớm, dữ liệu chính xác)
   (function(){
@@ -42,6 +49,7 @@
   <link rel="preconnect" href="https://connect.facebook.net" />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://analytics.tiktok.com" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" /></noscript>
   <style>
